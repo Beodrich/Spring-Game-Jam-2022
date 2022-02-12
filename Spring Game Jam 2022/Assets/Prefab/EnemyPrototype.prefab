@@ -84,8 +84,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 1
+  gunBarrel: {fileID: 0}
   shotCooldown: 0
-  timeLastFired: 0
+  shotForce: 3
   bulletPrefab: {fileID: 0}
   moveSet:
   - duration: 1
@@ -100,6 +101,8 @@ MonoBehaviour:
   - duration: 2
     movementAccel: {x: 3, y: 2}
     MoveClassDirection: 0
+  ShootAngle: 45
+  mode: 0
 --- !u!1 &4676018395569032356
 GameObject:
   m_ObjectHideFlags: 0

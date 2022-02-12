@@ -14,7 +14,7 @@ public class EnemyAI : MonoBehaviour
     public Transform gunBarrel;
 
     // projectile logic
-    public float shotCooldown = 1f;
+    public float shotCooldown = 0.5f;
     //public float projSpeed = 5f;
     public float shotForce = 3f;
     private float calculatedSpeed;
@@ -27,6 +27,9 @@ public class EnemyAI : MonoBehaviour
     private int moveIndex;
     private float moveStartTime;
     private bool hitWall;
+
+    public float ShootAngle = 0f;
+    
 
     // enums
     [HideInInspector]
@@ -138,8 +141,10 @@ public class EnemyAI : MonoBehaviour
         {
             GameObject projectile = Instantiate(bulletPrefab, gunBarrel.position, gunBarrel.rotation);
             Rigidbody2D rb = projectile.GetComponent<Rigidbody2D>();
+            //Vector3 dir = player.transform.position - gunBarrel.position;
             Vector3 dir = player.transform.position - gunBarrel.position;
-            rb.AddForce(dir.normalized * shotForce, ForceMode2D.Impulse);
+            Vector2 BulletDir = new Vector2 (Mathf.Cos(ShootAngle), Mathf.Sin(ShootAngle));
+            rb.AddForce(BulletDir.normalized * shotForce, ForceMode2D.Impulse);
 
             timeLastFired = Time.time;
             //Vector2 Target = new Vector2(player.transform.position.x, player.transform.position.y);
