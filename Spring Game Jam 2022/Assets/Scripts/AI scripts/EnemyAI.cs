@@ -13,8 +13,8 @@ public class EnemyAI : MonoBehaviour
     private GameObject player;
 
     // projectile logic
-    public float shotCooldown;
-    public float timeLastFired;
+    public float shotCooldown = 1f;
+    private float timeLastFired;
     public GameObject bulletPrefab;
     
     // Movement related
@@ -28,7 +28,7 @@ public class EnemyAI : MonoBehaviour
     [HideInInspector]
     public enum movementModes
     {
-        moveSet, follow, charge, orbit, agressiveOrbit
+        moveSet, follow, charge, orbit, agressiveOrbit, still
     }
     [HideInInspector]
     public enum movementDirections
@@ -36,7 +36,7 @@ public class EnemyAI : MonoBehaviour
         up, down, left, right
     }
 
-    private movementModes mode = movementModes.moveSet;
+    public movementModes mode = movementModes.moveSet;
 
     void Start()
     {
@@ -60,6 +60,7 @@ public class EnemyAI : MonoBehaviour
             Orbit();
         if (mode == movementModes.agressiveOrbit)
             AgressiveOrbit();
+        shoot();
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -128,7 +129,11 @@ public class EnemyAI : MonoBehaviour
 
     private void shoot()
     {
-
+        if(Time.time > shotCooldown + timeLastFired)
+        {
+            GameObject projectile = Instantiate(bulletPrefab, this.transform);
+            timeLastFired = Time.time;
+        }
     }
 
     private void TakeDamage()
