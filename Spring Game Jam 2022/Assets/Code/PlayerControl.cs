@@ -25,7 +25,8 @@ public class PlayerControl : MonoBehaviour
         //DrawLine();
     }
     public Vector2 GetMousePos(){
-        return mainCamera.WorldToScreenPoint(Input.mousePosition);
+        return Input.mousePosition;
+        
     }
 
    void DrawLine(){
