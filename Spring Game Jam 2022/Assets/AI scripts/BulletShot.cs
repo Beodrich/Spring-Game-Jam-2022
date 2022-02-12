@@ -4,9 +4,15 @@ using UnityEngine;
 
 public class BulletShot : MonoBehaviour
 {
-  public float copespeedX = 0f;
+    public float copespeedX = 0f;
    public float copespeedY = 0f;
    public float angle = 0 * Mathf.Rad2Deg;
+
+
+
+    public enum BulletPatters{
+
+    };
   /*        Vector2 VectorFromAngle (float theta) {
      return new Vector2 (Mathf.Cos(theta), Mathf.Sin(theta)); 
      
@@ -16,7 +22,6 @@ public class BulletShot : MonoBehaviour
  transform.Translate (VectorFromAngle (theta)); */
     
     
-    // Start is called before the first frame update
     void awake()
     {
 
@@ -43,6 +48,21 @@ public class BulletShot : MonoBehaviour
     {
         
     } */
+
+
+    public void Shoot(){
+        copespeedX = +1f;
+        copespeedY = +1f;
+        copespeedX = -1f;
+        copespeedY = -1f;
+
+        Vector2 MovDir = new Vector2(copespeedX, copespeedY).normalized;
+        Vector2 MovAng = new Vector2(Mathf.Sin(angle), Mathf.Cos(angle));
+        //Vector2 MovAng = new Vector2(Mathf.Cos(theta),Mathf.Sin(theta))
+        float movespeed = 6f; 
+        //float theta = 15 * Mathf.Rad2Deg;
+        transform.Translate (MovDir *  movespeed * MovAng);
+    }
 
     
 }
