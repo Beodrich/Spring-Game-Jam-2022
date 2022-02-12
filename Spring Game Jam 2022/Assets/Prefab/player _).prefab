@@ -103,7 +103,6 @@ MonoBehaviour:
   speed: 5
   mainCamera: {fileID: 0}
   lineRenderer: {fileID: 2890657075469063269}
-  animatorLogic: {fileID: 0}
 --- !u!120 &2890657075469063269
 LineRenderer:
   m_ObjectHideFlags: 0
@@ -215,7 +214,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bullet: {fileID: 4131563316169754560, guid: d2cceaae9e7e3c34087c5534b3f9ba38, type: 3}
+  crosshair: {fileID: 0}
   timer: 1
+  speed: 5
 --- !u!50 &1592284526
 Rigidbody2D:
   serializedVersion: 4

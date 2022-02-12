@@ -4,25 +4,40 @@ using UnityEngine;
 
 public class NineMill : MonoBehaviour
 {
-    private PlayerControl playerControl;
+    private GameObject player;
 
     [SerializeField] private GameObject bullet;
+
+
+    [SerializeField] private GameObject crosshair;
 
     [SerializeField]private float timer;
 
     private float timeToShoot;
+
+    [SerializeField] private float speed;
+
+
+    private Vector3 target;
     // Start is called before the first frame update
     void Start()
     {
         timeToShoot=0;
-        playerControl=GetComponent<PlayerControl>();
+        player=GameObject.FindGameObjectWithTag("Player");
     }
 
     // Update is called once per frame
     void Update()
     {
+        target=Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x,Input.mousePosition.y,transform.position.z));
+        crosshair.transform.position=new Vector2(target.x,target.y);
+        Vector3 difference= target-player.transform.position;
+        float rotationZ= Mathf.Atan2(difference.y,difference.x)*Mathf.Rad2Deg;
         if((Input.GetKeyDown(KeyCode.Mouse0)|| Input.GetKeyDown(KeyCode.Space)) && timeToShoot>timer){
-            Shoot();
+            float distance= difference.magnitude;
+            Vector2 direction= difference/distance;
+            direction.Normalize();
+            Shoot(difference,rotationZ);
             timeToShoot=0;
         }
         else{
@@ -31,13 +46,14 @@ public class NineMill : MonoBehaviour
         }
     }
 
-    void Shoot(){
-    var mousePos= Input.mousePosition;
-    mousePos.z=2.0f;
-    var objPos=Camera.main.ScreenToWorldPoint(mousePos);
-    var direction= (objPos-this.gameObject.transform.position).normalized;
+    void Shoot(Vector2 direction, float roation){
 
-    Instantiate(bullet, direction,Quaternion.identity);
+   GameObject bulletCopy= Instantiate(bullet) as GameObject;
+   bulletCopy.transform.position= player.transform.position;
+   bulletCopy.transform.rotation= Quaternion.Euler(0.0f,0.0f,roation);
+   bulletCopy.GetComponent<Rigidbody2D>().velocity=direction*speed;
+
+
 
 
 

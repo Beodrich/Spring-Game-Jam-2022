@@ -6,7 +6,11 @@ public class AnimatorController : MonoBehaviour
 {
     private string currentAnimationState;
 
-    [SerializeField] private Animator animator;
+     private Animator animator;
+
+    void Start(){
+        animator=GetComponent<Animator>();
+    }
    public void ChangeAnimationState(string newState){
         if(currentAnimationState==newState){
             return;
