@@ -11,7 +11,7 @@ public class PlayerControl : MonoBehaviour
 
     [SerializeField]LineRenderer lineRenderer;
 
-    [SerializeField] private AnimatorController animatorLogic;
+    private AnimatorController animatorLogic;
 
     private const string UP="up";
 

@@ -4,26 +4,13 @@ using UnityEngine;
 
 public class AimedBullet : MonoBehaviour
 {
-    private Transform player;
-    private Vector2 target;
-    public float speed = 1f;
-    private float calculatedSpeed;
-    // Start is called before the first frame update
-    void Start()
-    {
-        player = GameObject.FindGameObjectWithTag("Player").transform;
-        target = new Vector2(player.position.x, player.position.y);
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        calculatedSpeed = speed * Time.deltaTime;
-        this.transform.position = Vector2.MoveTowards(transform.position, target, calculatedSpeed);
-    }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        
+        if (collision.gameObject.tag == "Player" || collision.gameObject.tag == "Wall")
+        {
+            Destroy(gameObject);
+        }
     }
+
 }
