@@ -109,6 +109,9 @@ public int GetPlayerHealth(){
     return currentPlayerHp;
 }
 
+public int GetMoney(){
+    return money;
+}
 
 }
 
