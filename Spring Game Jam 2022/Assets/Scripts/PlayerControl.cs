@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+[RequireComponent(typeof(AnimatorController))]
 public class PlayerControl : MonoBehaviour
 {
 
@@ -11,10 +11,19 @@ public class PlayerControl : MonoBehaviour
 
     [SerializeField]LineRenderer lineRenderer;
 
+    [SerializeField] private AnimatorController animatorLogic;
 
-    // Start is called before the first frame update
+    private const string UP="up";
+
+    private const string DOWN="down";
+
+    private const string LEFT="left";
+
+    private const string RIGHT="right";
    
-
+    void Start(){
+        animatorLogic=GetComponent<AnimatorController>();
+    }
     // Update is called once per frame
     void Update()
     {
@@ -23,6 +32,19 @@ public class PlayerControl : MonoBehaviour
         Vector2 playerDirection= new Vector2(horz,vert);
         transform.Translate(playerDirection*speed*Time.deltaTime);
         //DrawLine();
+
+        if(Input.GetKeyDown(KeyCode.W)){
+            animatorLogic.ChangeAnimationState(UP);
+        }
+        if(Input.GetKeyDown(KeyCode.D)){
+            animatorLogic.ChangeAnimationState(RIGHT);
+        }
+        if(Input.GetKeyDown(KeyCode.A)){
+            animatorLogic.ChangeAnimationState(LEFT);
+        }
+        if(Input.GetKeyDown(KeyCode.S)){
+            animatorLogic.ChangeAnimationState(DOWN);
+        }
     }
     public Vector2 GetMousePos(){
         return Input.mousePosition;
