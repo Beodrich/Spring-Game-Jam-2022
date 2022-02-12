@@ -14,7 +14,7 @@ public class EnemyAI : MonoBehaviour
     public Transform gunBarrel;
 
     // projectile logic
-    public float shotCooldown = 1f;
+    public float shotCooldown = 0.5f;
     //public float projSpeed = 5f;
     public float shotForce = 3f;
     private float calculatedSpeed;
@@ -27,6 +27,9 @@ public class EnemyAI : MonoBehaviour
     private int moveIndex;
     private float moveStartTime;
     private bool hitWall;
+
+    public float ShootAngle = 0f;
+    
 
     // enums
     [HideInInspector]
@@ -42,7 +45,7 @@ public class EnemyAI : MonoBehaviour
 
     public movementModes mode = movementModes.moveSet;
 
-    void Start()
+    protected virtual void Start()
     {
         rb = gameObject.GetComponent<Rigidbody2D>();
         player = GameObject.FindGameObjectWithTag("Player");
@@ -50,7 +53,7 @@ public class EnemyAI : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    protected virtual void Update()
     {
         if (health <= 0)
             Die();
@@ -86,7 +89,7 @@ public class EnemyAI : MonoBehaviour
         }
     }
 
-    private void DecideMove()
+    protected virtual void DecideMove()
     {
         if(Time.time > moveStartTime + currentMove.duration || hitWall)
         {
@@ -107,7 +110,7 @@ public class EnemyAI : MonoBehaviour
         }
     }
 
-    private void move()
+    protected virtual void move()
     {
         DecideMove();
         Vector2 velocity = rb.velocity;
@@ -132,14 +135,16 @@ public class EnemyAI : MonoBehaviour
         rb.velocity = velocity;
     }
 
-    private void shoot()
+    protected virtual void shoot()
     {
         if(Time.time > shotCooldown + timeLastFired)
         {
             GameObject projectile = Instantiate(bulletPrefab, gunBarrel.position, gunBarrel.rotation);
             Rigidbody2D rb = projectile.GetComponent<Rigidbody2D>();
+            //Vector3 dir = player.transform.position - gunBarrel.position;
             Vector3 dir = player.transform.position - gunBarrel.position;
-            rb.AddForce(dir.normalized * shotForce, ForceMode2D.Impulse);
+            Vector2 BulletDir = new Vector2 (Mathf.Cos(ShootAngle), Mathf.Sin(ShootAngle));
+            rb.AddForce(BulletDir.normalized * shotForce, ForceMode2D.Impulse);
 
             timeLastFired = Time.time;
             //Vector2 Target = new Vector2(player.transform.position.x, player.transform.position.y);
@@ -148,35 +153,35 @@ public class EnemyAI : MonoBehaviour
 
     }
 
-    private void TakeDamage()
+    protected virtual void TakeDamage()
     {
         health -= 1;
     }
 
-    private void Die()
+    protected virtual void Die()
     {
         Destroy(gameObject);
     }
 
-    private void FollowPlayer()
+    protected virtual void FollowPlayer()
     {
         Vector2 dest = player.transform.position - transform.position;
         rb.velocity = dest;
     }
 
-    private void Orbit() // very janky, wouldn't reccomend using
+    protected virtual void Orbit() // very janky, wouldn't reccomend using
     {
         Vector3 zAxis = new Vector3(0, 0, 1);
         Vector3 dest = player.transform.position;
         transform.RotateAround(dest, zAxis, 0.2f);
     }
 
-    private void AgressiveOrbit() //really just a slower charge
+    protected virtual void AgressiveOrbit() //really just a slower charge
     {
         Vector2 dest = player.transform.position - transform.position;
         rb.velocity += dest * 1.5f * Time.deltaTime;
     }
-    private void ChargeAtPlayer()
+    protected virtual void ChargeAtPlayer()
     {
         Vector2 dest = player.transform.position - transform.position;
         rb.velocity += dest * 2f * Time.deltaTime;
