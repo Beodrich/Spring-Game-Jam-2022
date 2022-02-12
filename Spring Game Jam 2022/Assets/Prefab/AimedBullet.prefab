@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 8128123697106598758}
   - component: {fileID: 9092920365590644978}
   - component: {fileID: 7838852358806601877}
+  - component: {fileID: 3372813457368754556}
   m_Layer: 0
   m_Name: AimedBullet
   m_TagString: Untagged
@@ -218,3 +219,15 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &3372813457368754556
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7326053497288600280}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 54e4b4a7a09c78441862b34ceb1e1fd9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
