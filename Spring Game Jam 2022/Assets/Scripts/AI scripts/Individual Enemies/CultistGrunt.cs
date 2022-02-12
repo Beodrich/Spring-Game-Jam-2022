@@ -51,14 +51,15 @@ public class CultistGrunt : EnemyAI
 
     protected override void shoot()
     {
-        GameObject projectile = Instantiate(bulletPrefab, gunBarrel.position, gunBarrel.rotation);
-        Rigidbody2D rb = projectile.GetComponent<Rigidbody2D>();
-        //Vector3 dir = player.transform.position - gunBarrel.position;
-        Vector3 dir = player.transform.position - gunBarrel.position;
-        Vector2 BulletDir = new Vector2(Mathf.Cos(ShootAngle), Mathf.Sin(ShootAngle));
-        rb.AddForce(BulletDir.normalized * shotForce, ForceMode2D.Impulse);
+        if (Time.time > shotCooldown + timeLastFired)
+        {
+            GameObject projectile = Instantiate(bulletPrefab, gunBarrel.position, gunBarrel.rotation);
+            Rigidbody2D rb = projectile.GetComponent<Rigidbody2D>();
+            Vector3 dir = player.transform.position - gunBarrel.position;
+            rb.AddForce(dir.normalized * shotForce, ForceMode2D.Impulse);
 
-        timeLastFired = Time.time;
+            timeLastFired = Time.time;
+        }
     }
 
     protected override void TakeDamage()

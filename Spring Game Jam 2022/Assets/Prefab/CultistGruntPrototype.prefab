@@ -93,7 +93,7 @@ GameObject:
   - component: {fileID: 8223632388755088914}
   - component: {fileID: 8223632388755088912}
   - component: {fileID: 8223632388755088915}
-  - component: {fileID: 8223632388755088913}
+  - component: {fileID: 660979052}
   m_Layer: 0
   m_Name: CultistGruntPrototype
   m_TagString: Untagged
@@ -154,7 +154,7 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &8223632388755088913
+--- !u!114 &660979052
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -163,29 +163,20 @@ MonoBehaviour:
   m_GameObject: {fileID: 8223632388755088919}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7d23d7718504344479b81dc774aee46e, type: 3}
+  m_Script: {fileID: 11500000, guid: 4cb82a5864cd6f24898ecae583124e57, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   health: 1
   gunBarrel: {fileID: 3396109977128356231}
-  shotCooldown: 0.5
-  shotForce: 10
+  shotCooldown: 1
+  shotForce: 5
   bulletPrefab: {fileID: 7326053497288600280, guid: 8cbf1af1e90b69e4b837c9649ae894db, type: 3}
   moveSet:
-  - duration: 1
-    movementAccel: {x: 3, y: 2}
-    MoveClassDirection: 2
-  - duration: 1
-    movementAccel: {x: 3, y: 2}
-    MoveClassDirection: 1
-  - duration: 2
-    movementAccel: {x: 3, y: 2}
-    MoveClassDirection: 3
-  - duration: 2
-    movementAccel: {x: 3, y: 2}
+  - duration: 0
+    movementAccel: {x: 0, y: 0}
     MoveClassDirection: 0
   ShootAngle: 0
-  mode: 5
+  mode: 4
 --- !u!1 &8223632389780245374
 GameObject:
   m_ObjectHideFlags: 0
