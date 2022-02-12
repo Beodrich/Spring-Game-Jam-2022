@@ -9,24 +9,24 @@ public class EnemyAI : MonoBehaviour
     //public Vector2 acceleration;
 
     // gameObject related
-    private Rigidbody2D rb = new Rigidbody2D();
-    private GameObject player;
+    protected Rigidbody2D rb = new Rigidbody2D();
+    protected GameObject player;
     public Transform gunBarrel;
 
     // projectile logic
     public float shotCooldown = 0.5f;
     //public float projSpeed = 5f;
     public float shotForce = 3f;
-    private float calculatedSpeed;
-    private float timeLastFired;
+    protected float calculatedSpeed;
+    protected float timeLastFired;
     public GameObject bulletPrefab;
     
     // Movement related
     public List<Move> moveSet = new List<Move>(1);
-    private Move currentMove;
-    private int moveIndex;
-    private float moveStartTime;
-    private bool hitWall;
+    protected Move currentMove;
+    protected int moveIndex;
+    protected float moveStartTime;
+    protected bool hitWall;
 
     public float ShootAngle = 0f;
     
