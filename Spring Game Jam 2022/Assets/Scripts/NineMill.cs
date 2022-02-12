@@ -35,8 +35,9 @@ public class NineMill : MonoBehaviour
     var mousePos= Input.mousePosition;
     mousePos.z=2.0f;
     var objPos=Camera.main.ScreenToWorldPoint(mousePos);
+    var direction= (objPos-this.gameObject.transform.position).normalized;
 
-    Instantiate(bullet, objPos,Quaternion.identity);
+    Instantiate(bullet, direction,Quaternion.identity);
 
 
 

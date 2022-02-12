@@ -4,39 +4,40 @@ using UnityEngine;
 
 public class EnemyAI : MonoBehaviour
 {
+    // status variables
     public int health = 1;
-    public Vector2 acceleration;
-    //public float acceleration = 100f;
+    //public Vector2 acceleration;
+
+    // gameObject related
+    private Rigidbody2D rb = new Rigidbody2D();
+    private GameObject player;
+
+    // projectile logic
     public float shotCooldown;
     public float timeLastFired;
-
     public GameObject bulletPrefab;
-    private Rigidbody2D rb = new Rigidbody2D();
-
-    private GameObject player;
-    //private float chargeAcceleration = 5;
-
-    private List<Move> moveSet = new List<Move>() { 
-        new Move("up", 1),
-        new Move("left", 1),
-        new Move("down", 2),
-        new Move("right", 2)
-    };
+    
+    // Movement related
+    public List<Move> moveSet = new List<Move>(1);
     private Move currentMove;
     private int moveIndex;
     private float moveStartTime;
-
     private bool hitWall;
 
+    // enums
     [HideInInspector]
     public enum movementModes
     {
         moveSet, follow, charge, orbit, agressiveOrbit
     }
+    [HideInInspector]
+    public enum movementDirections
+    {
+        up, down, left, right
+    }
 
-    public movementModes mode = movementModes.moveSet;
+    private movementModes mode = movementModes.moveSet;
 
-    // Start is called before the first frame update
     void Start()
     {
         rb = gameObject.GetComponent<Rigidbody2D>();
@@ -105,21 +106,21 @@ public class EnemyAI : MonoBehaviour
         DecideMove();
         Vector2 velocity = rb.velocity;
 
-        if(currentMove.moveDirection == "right")
+        if (currentMove.MoveClassDirection == movementDirections.right)
         {
-            velocity.x += acceleration.x * Time.deltaTime;
+            velocity.x += currentMove.movementAccel.x * Time.deltaTime;
         }
-        if (currentMove.moveDirection == "left")
+        if (currentMove.MoveClassDirection == movementDirections.left)
         {
-            velocity.x -= acceleration.x * Time.deltaTime;
+            velocity.x -= currentMove.movementAccel.x * Time.deltaTime;
         }
-        if (currentMove.moveDirection == "up")
+        if (currentMove.MoveClassDirection == movementDirections.up)
         {
-            velocity.y += acceleration.y * Time.deltaTime;
+            velocity.y += currentMove.movementAccel.y * Time.deltaTime;
         }
-        if (currentMove.moveDirection == "down")
+        if (currentMove.MoveClassDirection == movementDirections.down)
         {
-            velocity.y -= acceleration.y * Time.deltaTime;
+            velocity.y -= currentMove.movementAccel.y * Time.deltaTime;
         }
 
         rb.velocity = velocity;
@@ -156,23 +157,30 @@ public class EnemyAI : MonoBehaviour
     private void AgressiveOrbit() //really just a slower charge
     {
         Vector2 dest = player.transform.position - transform.position;
-        rb.velocity += dest * Time.deltaTime;
+        rb.velocity += dest * 1.5f * Time.deltaTime;
     }
     private void ChargeAtPlayer()
     {
         Vector2 dest = player.transform.position - transform.position;
         rb.velocity += dest * 2f * Time.deltaTime;
     }
-}
 
-public class Move
-{
-    public float duration;
-    public string moveDirection;
 
-    public Move(string moveDirection, float duration)
+    [System.Serializable]
+    public class Move
     {
-        this.moveDirection = moveDirection;
-        this.duration = duration;
+        public float duration;
+        public Vector2 movementAccel = new Vector2(3, 2);
+        public movementDirections MoveClassDirection;
+
+        [SerializeField]
+        private Move(movementDirections MoveClassDirection, float duration)
+        {
+            this.MoveClassDirection = MoveClassDirection;
+            this.duration = duration;
+        }
     }
+
 }
+
+

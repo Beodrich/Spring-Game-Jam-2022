@@ -175,7 +175,7 @@ MonoBehaviour:
   shotCooldown: 0
   timeLastFired: 0
   bulletPrefab: {fileID: 0}
-  mode: 3
+  mode: 2
 --- !u!4 &814821622
 Transform:
   m_ObjectHideFlags: 0
