@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class pewpew : MonoBehaviour
 {
-     private Transform player;
+    private Transform player;
     private Vector3 target;
 
     [SerializeField] private AudioSource music;
