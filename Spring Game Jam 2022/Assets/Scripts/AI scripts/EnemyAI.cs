@@ -28,7 +28,8 @@ public class EnemyAI : MonoBehaviour
     private float moveStartTime;
     private bool hitWall;
 
-    public float ShootAngle = 0f;
+    public float ShootAngle;
+   
     
 
     // enums
@@ -50,6 +51,7 @@ public class EnemyAI : MonoBehaviour
         rb = gameObject.GetComponent<Rigidbody2D>();
         player = GameObject.FindGameObjectWithTag("Player");
         currentMove = moveSet[0];
+        ShootAngle*=Mathf.Rad2Deg;
     }
 
     // Update is called once per frame
