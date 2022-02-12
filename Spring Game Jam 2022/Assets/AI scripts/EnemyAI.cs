@@ -18,9 +18,4 @@ public class EnemyAI : MonoBehaviour
     {
         
     }
-
-    private void OnAnimatorMove()
-    {
-        gameObject
-    }
 }
