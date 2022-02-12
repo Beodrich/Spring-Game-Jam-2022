@@ -64,7 +64,11 @@ public class PlayerControl : MonoBehaviour
        //lineRenderer.useWorldSpace=true;
 
    }
-   
-  
+
+  void OnTriggerEnter2D(Collider2D other){
+      if(other.gameObject.tag=="EnemyProjectile"){
+          GameManager.instance.DoAction(1,GameManager.value.currentPlayerHp,false);
+      }
+  }
 
 }
