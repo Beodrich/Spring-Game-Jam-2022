@@ -46,20 +46,55 @@ public class GameManager : MonoBehaviour
     currentPlayerHp=MAX_PLAYER_HP;
 
     }
-    /// <summary>
-    /// adds or subtracks the player hp
-    /// </summary>
-    /// <param name="amount"></param>
-    /// <param name="isAdding"></param>
-    public void DoHPAction(int amount, bool isAdding){
-        if(isAdding){
-            currentPlayerHp+=amount;
-        }
-        else{
-            currentPlayerHp-=amount;
-            if(currentPlayerHp<0){
-                currentPlayerHp=0;
+ 
+
+    public void DoAction(int amount, value enumValue, bool isAdding){
+        switch(enumValue){
+            case value.currentPlayerHp:
+            if(isAdding){
+                currentPlayerHp+=amount;
+                if(currentPlayerHp>MAX_PLAYER_HP){
+                    currentPlayerHp=MAX_PLAYER_HP;
+                }
             }
+            else{
+                currentPlayerHp-=amount;
+                if(currentPlayerHp<0){
+                    currentPlayerHp=0;
+                }
+            }
+            UIMananger.instance.UpdatePlayerHealth();
+            break;
+
+            case value.Money:
+            if(isAdding){
+                money+=amount;
+            }
+            else{
+                money-=amount;
+                if(money<0){
+                    money=0;
+                }
+            }
+            break;
+
+            case value.score:
+            if(isAdding){
+                score+=amount;
+            }
+            else{
+                score-=amount;
+                if(score<0){
+                    score=0;
+                }
+            }
+            break;
+            default:
+            Debug.LogError("Enum value not implemented");
+            break;
+           
+
+
         }
     }
   /// <summary>
@@ -70,27 +105,10 @@ public void LoadLevel(string levelName){
     SceneManager.LoadScene(levelName);
 }
 
-public void DoScore(int amount, bool isAdding){
-    if(isAdding){
-        score+=amount;
-    }
-    else{
-        score-=amount;
-        if(score<0){
-            score=0;
-        }
-    }
+public int GetPlayerHealth(){
+    return currentPlayerHp;
 }
- public void DoMoney(int amount, bool isAdding){
-       if(isAdding){
-        money+=amount;
-    }
-    else{
-        money-=amount;
-        if(money<0){
-            money=0;
-        }
-    }
- }
+
+
 }
 
