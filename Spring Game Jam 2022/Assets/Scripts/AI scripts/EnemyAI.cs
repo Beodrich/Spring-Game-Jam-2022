@@ -6,7 +6,7 @@ public class EnemyAI : MonoBehaviour
 {
     // status variables
     public int health = 1;
-    public Vector2 acceleration;
+    //public Vector2 acceleration;
 
     // gameObject related
     private Rigidbody2D rb = new Rigidbody2D();
@@ -37,9 +37,7 @@ public class EnemyAI : MonoBehaviour
     }
 
     private movementModes mode = movementModes.moveSet;
-    //private movementDirections direction = movementDirections.up;
 
-    // Start is called before the first frame update
     void Start()
     {
         rb = gameObject.GetComponent<Rigidbody2D>();
@@ -110,19 +108,19 @@ public class EnemyAI : MonoBehaviour
 
         if (currentMove.MoveClassDirection == movementDirections.right)
         {
-            velocity.x += acceleration.x * Time.deltaTime;
+            velocity.x += currentMove.movementAccel.x * Time.deltaTime;
         }
         if (currentMove.MoveClassDirection == movementDirections.left)
         {
-            velocity.x -= acceleration.x * Time.deltaTime;
+            velocity.x -= currentMove.movementAccel.x * Time.deltaTime;
         }
         if (currentMove.MoveClassDirection == movementDirections.up)
         {
-            velocity.y += acceleration.y * Time.deltaTime;
+            velocity.y += currentMove.movementAccel.y * Time.deltaTime;
         }
         if (currentMove.MoveClassDirection == movementDirections.down)
         {
-            velocity.y -= acceleration.y * Time.deltaTime;
+            velocity.y -= currentMove.movementAccel.y * Time.deltaTime;
         }
 
         rb.velocity = velocity;
@@ -172,6 +170,7 @@ public class EnemyAI : MonoBehaviour
     public class Move
     {
         public float duration;
+        public Vector2 movementAccel = new Vector2(3, 2);
         public movementDirections MoveClassDirection;
 
         [SerializeField]
