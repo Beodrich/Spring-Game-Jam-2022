@@ -45,7 +45,7 @@ public class EnemyAI : MonoBehaviour
 
     public movementModes mode = movementModes.moveSet;
 
-    void Start()
+    protected virtual void Start()
     {
         rb = gameObject.GetComponent<Rigidbody2D>();
         player = GameObject.FindGameObjectWithTag("Player");
@@ -53,7 +53,7 @@ public class EnemyAI : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    protected virtual void Update()
     {
         if (health <= 0)
             Die();
@@ -89,7 +89,7 @@ public class EnemyAI : MonoBehaviour
         }
     }
 
-    private void DecideMove()
+    protected virtual void DecideMove()
     {
         if(Time.time > moveStartTime + currentMove.duration || hitWall)
         {
@@ -110,7 +110,7 @@ public class EnemyAI : MonoBehaviour
         }
     }
 
-    private void move()
+    protected virtual void move()
     {
         DecideMove();
         Vector2 velocity = rb.velocity;
@@ -135,7 +135,7 @@ public class EnemyAI : MonoBehaviour
         rb.velocity = velocity;
     }
 
-    private void shoot()
+    protected virtual void shoot()
     {
         if(Time.time > shotCooldown + timeLastFired)
         {
@@ -153,35 +153,35 @@ public class EnemyAI : MonoBehaviour
 
     }
 
-    private void TakeDamage()
+    protected virtual void TakeDamage()
     {
         health -= 1;
     }
 
-    private void Die()
+    protected virtual void Die()
     {
         Destroy(gameObject);
     }
 
-    private void FollowPlayer()
+    protected virtual void FollowPlayer()
     {
         Vector2 dest = player.transform.position - transform.position;
         rb.velocity = dest;
     }
 
-    private void Orbit() // very janky, wouldn't reccomend using
+    protected virtual void Orbit() // very janky, wouldn't reccomend using
     {
         Vector3 zAxis = new Vector3(0, 0, 1);
         Vector3 dest = player.transform.position;
         transform.RotateAround(dest, zAxis, 0.2f);
     }
 
-    private void AgressiveOrbit() //really just a slower charge
+    protected virtual void AgressiveOrbit() //really just a slower charge
     {
         Vector2 dest = player.transform.position - transform.position;
         rb.velocity += dest * 1.5f * Time.deltaTime;
     }
-    private void ChargeAtPlayer()
+    protected virtual void ChargeAtPlayer()
     {
         Vector2 dest = player.transform.position - transform.position;
         rb.velocity += dest * 2f * Time.deltaTime;
