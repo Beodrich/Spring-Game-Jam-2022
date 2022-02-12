@@ -32,6 +32,7 @@ public class GameManager : MonoBehaviour
          instance=this;
          DontDestroyOnLoad(this);
          SetPlayerHP();
+        
      }   
      else{
          Destroy(instance);
@@ -76,6 +77,9 @@ public class GameManager : MonoBehaviour
                     money=0;
                 }
             }
+            Debug.Log("current money is "+ money);
+
+            UIMananger.instance.UpdateMoneyUI();
             break;
 
             case value.score:

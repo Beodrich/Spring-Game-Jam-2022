@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class UIMananger : MonoBehaviour
 {
@@ -9,6 +10,8 @@ public class UIMananger : MonoBehaviour
     public GameObject[] playerHPBar;
 
     private GameObject currentHPBar;
+
+    [SerializeField] private TMP_Text moneyText;
     // Start is called before the first frame update
     void Start()
     {
@@ -53,5 +56,12 @@ public class UIMananger : MonoBehaviour
 
 
     }
+   }
+   public void UpdateMoneyUI(){
+       int money=GameManager.instance.GetMoney();
+       moneyText.text= "$ "+ money;
+
+
+
    }
 }

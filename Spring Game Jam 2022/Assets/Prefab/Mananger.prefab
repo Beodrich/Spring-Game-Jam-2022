@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 4506290582022249047}
   - component: {fileID: 2841504184043165643}
   - component: {fileID: 8047345230169135897}
+  - component: {fileID: 411493585014447420}
   m_Layer: 0
   m_Name: Mananger
   m_TagString: Untagged
@@ -56,4 +57,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 210f906061a75814e8641a195863beae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerHPBar: []
+  playerHPBar:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  moneyText: {fileID: 0}
+--- !u!114 &411493585014447420
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1436668582834222736}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fa54c5b46c41be446944b8880f04aabc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
