@@ -2,11 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class NewBehaviourScript : MonoBehaviour
+public class BulletShot : MonoBehaviour
 {
-   float copespeedX = 0f;
-    float copespeedY = 0f;
-    float angle = 0 * Mathf.Rad2Deg;
+  public float copespeedX = 0f;
+   public float copespeedY = 0f;
+   public float angle = 0 * Mathf.Rad2Deg;
   /*        Vector2 VectorFromAngle (float theta) {
      return new Vector2 (Mathf.Cos(theta), Mathf.Sin(theta)); 
      
