@@ -2,14 +2,15 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.UI;
 
 public class UIMananger : MonoBehaviour
 {
     public static UIMananger instance;
 
-    public GameObject[] playerHPBar;
+    public Sprite[] playerHPBar;
 
-    private GameObject currentHPBar;
+    [SerializeField]private GameObject currentHPBar;
 
     [SerializeField] private TMP_Text moneyText;
     // Start is called before the first frame update
@@ -29,25 +30,25 @@ public class UIMananger : MonoBehaviour
     int amount= GameManager.instance.GetPlayerHealth();
     switch(amount){
         case 0:
-        currentHPBar=playerHPBar[0];//shoule be dead
+        currentHPBar.GetComponent<SpriteRenderer>().sprite=playerHPBar[0] ;//shoule be dead
         
         break;
 
         case 1:
-        currentHPBar=playerHPBar[1];
+        currentHPBar.GetComponent<SpriteRenderer>().sprite=playerHPBar[1];
         break;
 
         case 2:
-        currentHPBar=playerHPBar[2];
+        currentHPBar.GetComponent<SpriteRenderer>().sprite=playerHPBar[2];
         break;
 
         case 3:
-        currentHPBar=playerHPBar[3];
+        currentHPBar.GetComponent<SpriteRenderer>().sprite=playerHPBar[3];
 
         break;
 
         case 4:
-        currentHPBar=playerHPBar[4];
+        currentHPBar.GetComponent<SpriteRenderer>().sprite=playerHPBar[4];
         break;
 
         default:
