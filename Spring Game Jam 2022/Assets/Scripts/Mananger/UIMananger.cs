@@ -8,6 +8,8 @@ public class UIMananger : MonoBehaviour
 {
     public static UIMananger instance;
 
+    [SerializeField] private TMP_Text itemCostText;
+
 
     public GameObject FullHP;
 
@@ -105,6 +107,29 @@ public class UIMananger : MonoBehaviour
 
 
    }
+
+
+   public void UpdateItemUI(ShopSystem.ItemType item,int cost){
+       switch(item){
+           case ShopSystem.ItemType.Health:
+           itemCostText.text="Potion cost $ "+ cost;
+           break;
+           case ShopSystem.ItemType.NineMill:
+           itemCostText.text="NineMill cost $ "+cost;
+           break;
+           case ShopSystem.ItemType.ShotGun:
+           itemCostText.text="ShotGun cost $ "+cost;
+           break;
+           default:
+           itemCostText.text="Item not supported";
+           break;
+       }
+       
+
+   }
+   public void SetItemUIActive(bool value){
+        itemCostText.gameObject.SetActive(value);    
+    }
    public void UpdateCurrentWeapon(){
        switch(GameManager.instance.GetCurrentWeapon()){
            case GameManager.Weapon.NineMill:
