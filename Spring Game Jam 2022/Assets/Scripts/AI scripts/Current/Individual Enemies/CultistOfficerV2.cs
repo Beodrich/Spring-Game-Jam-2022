@@ -82,7 +82,7 @@ public class CultistOfficerV2 : EnemyAI_V2
                 float angleStep = (ConeEndAngle - ConeStartAngle) / ConeBulletNum;
                 float angle = ConeStartAngle;
 
-                Debug.Log("conemode");
+                //Debug.Log("conemode");
                 for (int i = 0; i < ConeBulletNum + 1; i++)
                 {
                     float dirX = transform.position.x + Mathf.Sin((angle * Mathf.PI) / 180f);
@@ -107,7 +107,7 @@ public class CultistOfficerV2 : EnemyAI_V2
                 float angleStep = (ShotgunEndAngle - ShotgunStartAngle) / ShotgunBulletNum;
                 float angle = ShotgunStartAngle;
 
-                Debug.Log("shotgun");
+                //Debug.Log("shotgun");
                 for (int i = 0; i < ShotgunBulletNum + 1; i++)
                 {
                     float dirX = player.transform.position.x + Mathf.Sin((angle * Mathf.PI) / 180f);
