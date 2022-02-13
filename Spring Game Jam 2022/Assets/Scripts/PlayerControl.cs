@@ -67,6 +67,7 @@ public class PlayerControl : MonoBehaviour
 
   void OnTriggerEnter2D(Collider2D other){
       if(other.gameObject.tag=="EnemyProjectile"){
+          print("damage");
           GameManager.instance.DoAction(1,GameManager.value.currentPlayerHp,false);
       }
   }

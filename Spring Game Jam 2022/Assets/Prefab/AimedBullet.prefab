@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 8128123697106598758}
   - component: {fileID: 9092920365590644978}
   - component: {fileID: 7838852358806601877}
-  - component: {fileID: 3372813457368754556}
+  - component: {fileID: 4244679532979478087}
   m_Layer: 0
   m_Name: AimedBullet
   m_TagString: EnemyProjectile
@@ -219,7 +219,7 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &3372813457368754556
+--- !u!114 &4244679532979478087
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

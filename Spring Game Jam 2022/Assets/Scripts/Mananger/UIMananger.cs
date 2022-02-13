@@ -8,10 +8,29 @@ public class UIMananger : MonoBehaviour
 {
     public static UIMananger instance;
 
-    public Sprite[] playerHPBar;
 
-    [SerializeField]private GameObject currentHPBar;
+    public GameObject FullHP;
 
+    public GameObject ThreeHP;
+
+    public GameObject TwoHP;
+
+    public GameObject OneHP;
+
+    public GameObject Dead;
+
+
+
+
+
+
+    public enum HealthState{
+        Four=4
+        ,Three=3,
+        Two=2,
+        One=1,
+        Dead=0
+    }
     [SerializeField] private TMP_Text moneyText;
     // Start is called before the first frame update
     void Start()
@@ -26,37 +45,56 @@ public class UIMananger : MonoBehaviour
         }
     }
 
-   public void UpdatePlayerHealth(){
-    int amount= GameManager.instance.GetPlayerHealth();
-    switch(amount){
-        case 0:
-        currentHPBar.GetComponent<SpriteRenderer>().sprite=playerHPBar[0] ;//shoule be dead
-        
-        break;
-
-        case 1:
-        currentHPBar.GetComponent<SpriteRenderer>().sprite=playerHPBar[1];
-        break;
-
-        case 2:
-        currentHPBar.GetComponent<SpriteRenderer>().sprite=playerHPBar[2];
-        break;
-
-        case 3:
-        currentHPBar.GetComponent<SpriteRenderer>().sprite=playerHPBar[3];
+   public void UpdatePlayerHealth(HealthState state){
+       switch (state){
+        case HealthState.Four:
+        FullHP.SetActive(true);
+        ThreeHP.SetActive(false);
+        TwoHP.SetActive(false);
+        OneHP.SetActive(false);
+        Dead.SetActive(false);
 
         break;
-
-        case 4:
-        currentHPBar.GetComponent<SpriteRenderer>().sprite=playerHPBar[4];
+        case HealthState.Three:
+        FullHP.SetActive(false);
+        ThreeHP.SetActive(true);
+        TwoHP.SetActive(false);
+        OneHP.SetActive(false);
+        Dead.SetActive(false);
         break;
-
+        case HealthState.Two:
+        FullHP.SetActive(false);
+        ThreeHP.SetActive(false);
+        TwoHP.SetActive(true);
+        OneHP.SetActive(false);
+        Dead.SetActive(false);
+        break;
+        case HealthState.One:
+        FullHP.SetActive(false);
+        ThreeHP.SetActive(false);
+        TwoHP.SetActive(false);
+        OneHP.SetActive(true);
+        Dead.SetActive(false);
+        break;
+        case HealthState.Dead:
+        FullHP.SetActive(false);
+        ThreeHP.SetActive(false);
+        TwoHP.SetActive(false);
+        OneHP.SetActive(false);
+        Dead.SetActive(true);
+        break;
         default:
-        Debug.LogError("Hp needs to be between 0-4");
+        Debug.LogError("Health not supported");
         break;
 
 
-    }
+
+
+
+       }
+    
+
+    
    }
    public void UpdateMoneyUI(){
        int money=GameManager.instance.GetMoney();
@@ -65,4 +103,6 @@ public class UIMananger : MonoBehaviour
 
 
    }
-}
+  
+   }
+
