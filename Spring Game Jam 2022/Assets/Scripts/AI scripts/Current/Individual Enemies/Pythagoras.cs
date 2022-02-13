@@ -89,6 +89,7 @@ public class Pythagoras : EnemyAI_V2
                     Vector2 bulletDir = (bulletMoveVector - transform.position).normalized;
 
                     GameObject bullet = Instantiate(bulletPrefab);
+                    Destroy(bullet,3f);//might change
                     Rigidbody2D rb = bullet.GetComponent<Rigidbody2D>();
                     bullet.transform.position = gunBarrel.position;
                     bullet.transform.rotation = gunBarrel.rotation;
