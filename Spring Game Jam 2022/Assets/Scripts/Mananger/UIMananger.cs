@@ -7,6 +7,7 @@ using UnityEngine.SceneManagement;
 
 public class UIMananger : MonoBehaviour
 {
+    [SerializeField] private GameObject dealthText;
     public static UIMananger instance;
 
     [SerializeField] private TMP_Text itemCostText;
@@ -41,7 +42,6 @@ public class UIMananger : MonoBehaviour
     }
     [SerializeField] private TMP_Text moneyText;
 
-    [SerializeField] private TMP_Text currentWeaponText;
     // Start is called before the first frame update
 
     
@@ -62,7 +62,7 @@ public class UIMananger : MonoBehaviour
                 GameManager.instance.LoadLevel(SceneManager.GetActiveScene().name);
                 isDead=false;
                 GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerControl>().enabled=true;
-
+                dealthText.SetActive(false);
                 dealthScene.SetActive(false);
             }
             else if(Input.GetKey(KeyCode.Escape)){
@@ -109,7 +109,9 @@ public class UIMananger : MonoBehaviour
         OneHP.SetActive(false);
         Dead.SetActive(true);
         dealthScene.SetActive(true);
+        dealthText.SetActive(true);
         GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerControl>().enabled=false;
+
         break;
         default:
         Debug.LogError("Health not supported");
@@ -157,11 +159,9 @@ public class UIMananger : MonoBehaviour
    public void UpdateCurrentWeapon(){
        switch(GameManager.instance.GetCurrentWeapon()){
            case GameManager.Weapon.NineMill:
-           currentWeaponText.text="Current Weapon is 9Mill";
            break;
 
          case GameManager.Weapon.ShotGun:
-          currentWeaponText.text="Current Weapon is ShotGun";
           break;
 
 
