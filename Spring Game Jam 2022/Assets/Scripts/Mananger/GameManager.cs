@@ -64,7 +64,30 @@ public class GameManager : MonoBehaviour
                     currentPlayerHp=0;
                 }
             }
-            UIMananger.instance.UpdatePlayerHealth();
+            print("HP IS after damamge "+ currentPlayerHp);
+            switch(currentPlayerHp){
+                case 4:
+                UIMananger.instance.UpdatePlayerHealth(UIMananger.HealthState.Four);
+
+                break;
+                case 3:
+                 UIMananger.instance.UpdatePlayerHealth(UIMananger.HealthState.Three);
+
+                break;
+                case 2:
+                UIMananger.instance.UpdatePlayerHealth(UIMananger.HealthState.Two);
+
+                break;
+                case 1:
+                UIMananger.instance.UpdatePlayerHealth(UIMananger.HealthState.One);
+
+                break;
+                default:
+                UIMananger.instance.UpdatePlayerHealth(UIMananger.HealthState.Dead);
+                break;
+
+
+            }
             break;
 
             case value.Money:
