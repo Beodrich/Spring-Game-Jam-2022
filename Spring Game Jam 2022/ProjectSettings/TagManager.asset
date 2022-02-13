@@ -17,8 +17,8 @@ TagManager:
   - UI
   - PlayerProjectile
   - Enemy
-  - 
-  - 
+  - Walls
+  - Ground
   - 
   - 
   - 
@@ -44,4 +44,13 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Ground
+    uniqueID: 2594567143
+    locked: 0
+  - name: Walls
+    uniqueID: 1408948779
+    locked: 0
+  - name: Actors
+    uniqueID: 491827089
     locked: 0

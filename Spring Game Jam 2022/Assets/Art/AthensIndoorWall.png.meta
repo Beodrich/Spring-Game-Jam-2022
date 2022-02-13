@@ -1,55 +1,55 @@
 fileFormatVersion: 2
-guid: 66c37589f59d9e14c9f070c8d01c4f7f
+guid: 95b942e14dd62b2469f802e1cda2e636
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 3048845894783097350
-    second: AthensStreetTile1_2_0
+      213: 1549171697705096760
+    second: AthensIndoorWall_0
   - first:
-      213: -5152035703375881742
-    second: AthensStreetTile1_2_1
+      213: -5352571069524471879
+    second: AthensIndoorWall_1
   - first:
-      213: -1623530766922108291
-    second: AthensStreetTile1_2_2
+      213: -2664774817107575027
+    second: AthensIndoorWall_2
   - first:
-      213: 3829674239011640746
-    second: AthensStreetTile1_2_3
+      213: 4574155238466529982
+    second: AthensIndoorWall_3
   - first:
-      213: 2026195584704399302
-    second: AthensStreetTile1_2_4
+      213: 8651857132918686925
+    second: AthensIndoorWall_4
   - first:
-      213: -4248820930480320847
-    second: AthensStreetTile1_2_5
+      213: 8300505587377219843
+    second: AthensIndoorWall_5
   - first:
-      213: -575858447885554641
-    second: AthensStreetTile1_2_6
+      213: -3972819437856225348
+    second: AthensIndoorWall_6
   - first:
-      213: -2417379203578018225
-    second: AthensStreetTile1_2_7
+      213: -3432257161181930991
+    second: AthensIndoorWall_7
   - first:
-      213: -2989383319487401912
-    second: AthensStreetTile1_2_8
+      213: -959752895979521848
+    second: AthensIndoorWall_8
   - first:
-      213: -4837275948541857574
-    second: AthensStreetTile1_2_9
+      213: 3539294689158611960
+    second: AthensIndoorWall_9
   - first:
-      213: 3869398565078982507
-    second: AthensStreetTile1_2_10
+      213: -3670706797767527158
+    second: AthensIndoorWall_10
   - first:
-      213: 6930714833230868319
-    second: AthensStreetTile1_2_11
+      213: 8689115566458801790
+    second: AthensIndoorWall_11
   - first:
-      213: 4740497383235670997
-    second: AthensStreetTile1_2_12
+      213: 1773848304858877369
+    second: AthensIndoorWall_12
   - first:
-      213: -3714509892322738322
-    second: AthensStreetTile1_2_13
+      213: -7179630837561223680
+    second: AthensIndoorWall_13
   - first:
-      213: 7439342966488956022
-    second: AthensStreetTile1_2_14
+      213: -6394412385577785856
+    second: AthensIndoorWall_14
   - first:
-      213: 7322442090973266662
-    second: AthensStreetTile1_2_15
+      213: -4721649025229340245
+    second: AthensIndoorWall_15
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -116,7 +116,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -128,7 +128,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -139,7 +139,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: AthensStreetTile1_2_0
+      name: AthensIndoorWall_0
       rect:
         serializedVersion: 2
         x: 0
@@ -153,14 +153,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 60a5475103daf4a20800000000000000
-      internalID: 3048845894783097350
+      spriteID: 8361dc18373cf7510800000000000000
+      internalID: 1549171697705096760
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: AthensStreetTile1_2_1
+      name: AthensIndoorWall_1
       rect:
         serializedVersion: 2
         x: 16
@@ -174,14 +174,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2f9962e03da4088b0800000000000000
-      internalID: -5152035703375881742
+      spriteID: 9bf06fda8f8d7b5b0800000000000000
+      internalID: -5352571069524471879
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: AthensStreetTile1_2_2
+      name: AthensIndoorWall_2
       rect:
         serializedVersion: 2
         x: 32
@@ -195,14 +195,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d72b0bb8e5f0879e0800000000000000
-      internalID: -1623530766922108291
+      spriteID: d0f75e32c61d40bd0800000000000000
+      internalID: -2664774817107575027
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: AthensStreetTile1_2_3
+      name: AthensIndoorWall_3
       rect:
         serializedVersion: 2
         x: 48
@@ -216,14 +216,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: aa5d0cd0e6cb52530800000000000000
-      internalID: 3829674239011640746
+      spriteID: eba2a4854f9aa7f30800000000000000
+      internalID: 4574155238466529982
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: AthensStreetTile1_2_4
+      name: AthensIndoorWall_4
       rect:
         serializedVersion: 2
         x: 0
@@ -237,14 +237,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6c745c7262e7e1c10800000000000000
-      internalID: 2026195584704399302
+      spriteID: dc44c0f0932911870800000000000000
+      internalID: 8651857132918686925
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: AthensStreetTile1_2_5
+      name: AthensIndoorWall_5
       rect:
         serializedVersion: 2
         x: 16
@@ -258,14 +258,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1bec97cffd72905c0800000000000000
-      internalID: -4248820930480320847
+      spriteID: 309a3cf8ad1513370800000000000000
+      internalID: 8300505587377219843
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: AthensStreetTile1_2_6
+      name: AthensIndoorWall_6
       rect:
         serializedVersion: 2
         x: 32
@@ -279,14 +279,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f2cafdceac32208f0800000000000000
-      internalID: -575858447885554641
+      spriteID: cb700d925c5bdd8c0800000000000000
+      internalID: -3972819437856225348
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: AthensStreetTile1_2_7
+      name: AthensIndoorWall_7
       rect:
         serializedVersion: 2
         x: 48
@@ -300,14 +300,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f46c0531c6eb37ed0800000000000000
-      internalID: -2417379203578018225
+      spriteID: 11ad5f9fb4c2e50d0800000000000000
+      internalID: -3432257161181930991
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: AthensStreetTile1_2_8
+      name: AthensIndoorWall_8
       rect:
         serializedVersion: 2
         x: 0
@@ -321,14 +321,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 840b97895b39386d0800000000000000
-      internalID: -2989383319487401912
+      spriteID: 8c8fcfa73d54ea2f0800000000000000
+      internalID: -959752895979521848
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: AthensStreetTile1_2_9
+      name: AthensIndoorWall_9
       rect:
         serializedVersion: 2
         x: 16
@@ -342,14 +342,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ad03f9e572b8edcb0800000000000000
-      internalID: -4837275948541857574
+      spriteID: 8f3c9be84c91e1130800000000000000
+      internalID: 3539294689158611960
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: AthensStreetTile1_2_10
+      name: AthensIndoorWall_10
       rect:
         serializedVersion: 2
         x: 32
@@ -363,14 +363,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b6f50f57e7dd2b530800000000000000
-      internalID: 3869398565078982507
+      spriteID: a05747c9d970f0dc0800000000000000
+      internalID: -3670706797767527158
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: AthensStreetTile1_2_11
+      name: AthensIndoorWall_11
       rect:
         serializedVersion: 2
         x: 48
@@ -384,14 +384,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f5fa14a9b68de2060800000000000000
-      internalID: 6930714833230868319
+      spriteID: e7e081f1290f59870800000000000000
+      internalID: 8689115566458801790
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: AthensStreetTile1_2_12
+      name: AthensIndoorWall_12
       rect:
         serializedVersion: 2
         x: 0
@@ -405,14 +405,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5d35e6af041a9c140800000000000000
-      internalID: 4740497383235670997
+      spriteID: 9bdca8092a9fd9810800000000000000
+      internalID: 1773848304858877369
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: AthensStreetTile1_2_13
+      name: AthensIndoorWall_13
       rect:
         serializedVersion: 2
         x: 16
@@ -426,14 +426,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e6fbd69eee8637cc0800000000000000
-      internalID: -3714509892322738322
+      spriteID: 00619b4eac3dc5c90800000000000000
+      internalID: -7179630837561223680
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: AthensStreetTile1_2_14
+      name: AthensIndoorWall_14
       rect:
         serializedVersion: 2
         x: 32
@@ -447,14 +447,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 67cffdf330bdd3760800000000000000
-      internalID: 7439342966488956022
+      spriteID: 006274a70db7247a0800000000000000
+      internalID: -6394412385577785856
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: AthensStreetTile1_2_15
+      name: AthensIndoorWall_15
       rect:
         serializedVersion: 2
         x: 48
@@ -468,8 +468,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6e284d8294a8e9560800000000000000
-      internalID: 7322442090973266662
+      spriteID: ba1c2295a35597eb0800000000000000
+      internalID: -4721649025229340245
       vertices: []
       indices: 
       edges: []
