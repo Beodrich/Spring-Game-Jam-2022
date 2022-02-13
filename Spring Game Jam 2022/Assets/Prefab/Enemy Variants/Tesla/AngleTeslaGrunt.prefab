@@ -51,6 +51,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3881818890686574797, guid: 20a91b371c4e544479c2eab246cfde4e, type: 3}
+      propertyPath: health
+      value: 20
+      objectReference: {fileID: 0}
     - target: {fileID: 3881818890686574798, guid: 20a91b371c4e544479c2eab246cfde4e, type: 3}
       propertyPath: m_Name
       value: AngleTeslaGrunt
