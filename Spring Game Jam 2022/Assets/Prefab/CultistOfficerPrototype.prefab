@@ -168,7 +168,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 1
   gunBarrel: {fileID: 861088050247360912}
-  shotCooldown: 0.5
+  shotCooldown: 1
   shotForce: 5
   bulletPrefab: {fileID: 7326053497288600280, guid: 8cbf1af1e90b69e4b837c9649ae894db, type: 3}
   moveSet:
@@ -176,8 +176,11 @@ MonoBehaviour:
     movementAccel: {x: 0, y: 0}
     MoveClassDirection: 0
   ShootAngle: 0
+  shootMode: 2
   mode: 5
-  shootMode: 0
+  numConeBullets: 10
+  startAngle: 0
+  endAngle: 180
 --- !u!1 &6265189970257453929
 GameObject:
   m_ObjectHideFlags: 0

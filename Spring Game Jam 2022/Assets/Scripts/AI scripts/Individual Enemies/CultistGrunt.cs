@@ -4,6 +4,12 @@ using UnityEngine;
 
 public class CultistGrunt : EnemyAI
 {
+    public enum ShootingMode
+    {
+        tracking, fixedAngle
+    }
+    public ShootingMode shootMode = ShootingMode.tracking;
+
     protected override void Start()
     {
         base.Start();
