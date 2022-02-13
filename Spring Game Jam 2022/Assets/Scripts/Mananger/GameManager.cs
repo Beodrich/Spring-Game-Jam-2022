@@ -174,6 +174,8 @@ public int GetPlayerHealth(){
 public int GetMoney(){
     return money;
 }
-
+public void Quit(){
+    Application.Quit();
+}
 }
 
