@@ -17,12 +17,12 @@ public class CultistGrunt_V2 : EnemyAI_V2
     protected override void Start()
     {
         base.Start();
-        shoot();
     }
 
     protected override void Update()
     {
         base.Update();
+        Shoot();
     }
 
     protected override void AgressiveOrbit()
@@ -60,10 +60,11 @@ public class CultistGrunt_V2 : EnemyAI_V2
         base.Orbit();
     }
 
-    private void shoot()
+    private void Shoot()
     {
         if (Time.time > shotCooldown + timeLastFired)
         {
+            //Debug.Log("shot");
             // tracking shoot mode
             if (shootMode == ShootingMode.tracking)
             {

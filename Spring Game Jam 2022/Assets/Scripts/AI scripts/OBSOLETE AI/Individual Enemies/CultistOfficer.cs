@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class CultistOfficer : EnemyAI
 {
-    [HideInInspector]
     
     [SerializeField]
     private int oNumConeBullets = 10;

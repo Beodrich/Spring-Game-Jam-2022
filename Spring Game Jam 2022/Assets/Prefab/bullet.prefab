@@ -12,9 +12,10 @@ GameObject:
   - component: {fileID: 6378315804670616965}
   - component: {fileID: 5671258961375631102}
   - component: {fileID: 428358305653429428}
+  - component: {fileID: 4761004847252256894}
   m_Layer: 6
   m_Name: bullet
-  m_TagString: Untagged
+  m_TagString: PlayerProjectile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -28,7 +29,7 @@ Transform:
   m_GameObject: {fileID: 4131563316169754560}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 4.0021, y: 3.4137, z: 0}
-  m_LocalScale: {x: 14.013923, y: 15.206219, z: 0.47}
+  m_LocalScale: {x: 4.755765, y: 5.1603823, z: 0.1594992}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -117,3 +118,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!58 &4761004847252256894
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4131563316169754560}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.08

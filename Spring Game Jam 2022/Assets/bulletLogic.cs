@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class bulletLogic : MonoBehaviour
 {
-    void OnCollisonEnter2D(Collider2D col){
-       if(col.gameObject.tag=="Wall"){
+    void OnTriggerEnter2D(Collider2D col){
+       if(col.gameObject.tag=="Wall" || col.gameObject.tag=="Enemy"){
            Destroy(gameObject);
        }
     }
