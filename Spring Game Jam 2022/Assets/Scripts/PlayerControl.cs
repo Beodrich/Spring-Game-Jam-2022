@@ -25,6 +25,9 @@ public class PlayerControl : MonoBehaviour
     private const string LEFT="left";
 
     private const string RIGHT="right";
+
+
+    private const string DEATH="death";
    
     void Start(){
         animatorLogic=GetComponent<AnimatorController>();
@@ -50,6 +53,12 @@ public class PlayerControl : MonoBehaviour
         if(Input.GetKeyDown(KeyCode.S)){
             animatorLogic.ChangeAnimationState(DOWN);
         }
+
+    }
+
+
+  public  void PlayerDealthLogic(){
+        animatorLogic.ChangeAnimationState(DEATH);
     }
  
 

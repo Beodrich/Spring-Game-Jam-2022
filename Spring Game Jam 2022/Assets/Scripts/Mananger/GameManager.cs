@@ -7,6 +7,8 @@ public class GameManager : MonoBehaviour
 {
 
     public static GameManager instance;
+
+    private bool hasPlayerDied=false;
     
 
     private int score;
@@ -112,6 +114,11 @@ public Weapon currentWeapon= Weapon.NineMill;
                 break;
                 default:
                 UIMananger.instance.UpdatePlayerHealth(UIMananger.HealthState.Dead);
+                //trigger dealth animation
+                if(!hasPlayerDied){
+                GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerControl>().PlayerDealthLogic();
+                hasPlayerDied=true;
+                }
                 break;
 
 
