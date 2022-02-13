@@ -7,7 +7,9 @@ public class ShopSystem : MonoBehaviour
     public static ShopSystem instance;
 
     public enum ItemType{
-        Health
+        Health,
+        SpreadShot
+
     };
     // Start is called before the first frame update
     void Start()
