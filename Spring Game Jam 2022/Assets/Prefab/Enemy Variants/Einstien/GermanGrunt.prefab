@@ -168,7 +168,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 15
   gunBarrel: {fileID: 8566092066998441440}
-  shotCooldown: 1.2
+  shotCooldown: 2.25
   shotForce: 3
   bulletPrefab: {fileID: 7326053497288600280, guid: 8cbf1af1e90b69e4b837c9649ae894db, type: 3}
   moveSet:
