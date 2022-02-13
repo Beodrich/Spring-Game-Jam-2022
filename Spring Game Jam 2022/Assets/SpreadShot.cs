@@ -6,6 +6,8 @@ public class SpreadShot : MonoBehaviour
 {
      private GameObject player;
 
+     [SerializeField] private Transform gunTip;
+
     [SerializeField] private GameObject bullet;
 
 
@@ -19,6 +21,22 @@ public class SpreadShot : MonoBehaviour
 
 
     private Vector3 target;
+
+    [SerializeField] private float angle;
+
+    [SerializeField] private int pellotCount;
+
+
+    private List<Quaternion> pellets;
+
+    void Awake(){
+        pellets= new List<Quaternion>(pellotCount);
+        for(int i=0; i<pellotCount;++i){
+            pellets.Add(Quaternion.Euler(Vector2.zero));
+        }
+    }
+
+    private float numConeBullets=5;
     // Start is called before the first frame update
     void Start()
     {
@@ -37,9 +55,7 @@ public class SpreadShot : MonoBehaviour
             float distance= difference.magnitude;
             Vector2 direction= difference/distance;
             direction.Normalize();
-            Shoot(difference,rotationZ,0f);
-            Shoot(difference,rotationZ,30f);
-            Shoot(difference,rotationZ,60f);
+            Shoot(difference,rotationZ);
 
 
             timeToShoot=0;
@@ -50,12 +66,18 @@ public class SpreadShot : MonoBehaviour
         }
     }
 
-    void Shoot(Vector2 direction, float roation, float offset){
+    void Shoot(Vector2 direction, float roation){
 
-   GameObject bulletCopy= Instantiate(bullet) as GameObject;
-   bulletCopy.transform.position= player.transform.position;
-   bulletCopy.transform.rotation= Quaternion.Euler(0.0f,0.0f,roation+offset);
-   bulletCopy.GetComponent<Rigidbody2D>().velocity=direction*speed;
+        for(int i=0; i<pellotCount;++i){
+            pellets[i]=Random.rotation;
+            GameObject p= Instantiate(bullet,gunTip.position,gunTip.rotation);
+            p.transform.rotation=Quaternion.RotateTowards(p.transform.rotation,pellets[i],angle);
+            p.GetComponent<Rigidbody2D>().AddForce(p.transform.right*direction*speed);
+
+
+        }
+            
+
 
 
 
