@@ -7,6 +7,7 @@ public class GameManager : MonoBehaviour
 {
 
     public static GameManager instance;
+  public static  bool hasDied=false;
 
     private bool hasPlayerDied=false;
     
@@ -35,26 +36,37 @@ public Weapon currentWeapon= Weapon.NineMill;
 
 
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
-     if(instance==null){
-         instance=this;
-         DontDestroyOnLoad(this);
+    
+    if (instance == null || instance == this)
+        {
+            instance = this;
+            hasDied=false;
+            DontDestroyOnLoad(this);
          SetPlayerHP();
          UIMananger.instance.UpdateCurrentWeapon();
-         
+        }
+        else
+        {
+            Destroy(this.gameObject);
+        }
+        DontDestroyOnLoad(this);
 
-        
-     }   
-     else{
-         Destroy(instance);
-
-    }
+        Debug.Log("Scene reloaded");
 
     }
     /// <summary>
     /// sets the player's hp to be the max hp
     /// </summary>
+    /// 
+    void Update(){
+        if(Input.GetKeyDown(KeyCode.F1)){
+            LoadLevel(SceneManager.GetActiveScene().name);
+            UIMananger.isDead=false;
+        }
+        print(currentPlayerHp);
+    }
     public void SetPlayerHP(){
     currentPlayerHp=MAX_PLAYER_HP;
 
@@ -164,7 +176,13 @@ public Weapon currentWeapon= Weapon.NineMill;
   /// </summary>
   /// <param name="levelName"></param>
 public void LoadLevel(string levelName){
+    
     SceneManager.LoadScene(levelName);
+    SetPlayerHP();
+    hasDied=true;
+
+
+   
 }
 
 public int GetPlayerHealth(){
