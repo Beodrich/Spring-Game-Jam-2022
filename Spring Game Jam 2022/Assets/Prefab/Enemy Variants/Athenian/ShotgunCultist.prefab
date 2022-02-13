@@ -187,7 +187,10 @@ MonoBehaviour:
   shotCooldown: 4
   shotForce: 3
   bulletPrefab: {fileID: 7326053497288600280, guid: 8cbf1af1e90b69e4b837c9649ae894db, type: 3}
-  moveSet: []
+  moveSet:
+  - duration: 0
+    movementAccel: {x: 0, y: 0}
+    MoveClassDirection: 0
   mode: 5
   ConeBulletNum: 10
   ConeStartAngle: 0
