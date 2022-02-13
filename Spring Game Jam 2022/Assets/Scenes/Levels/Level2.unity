@@ -7931,17 +7931,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 7924963681785181468, guid: 05db8b14524435f4a9fc44c4a685ead5, type: 3}
   m_PrefabInstance: {fileID: 30586911}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &44052446 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 1559446549, guid: b6fef183ebecb124dac36431e6082d83, type: 3}
-  m_PrefabInstance: {fileID: 1095272793}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &163695401 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 162319017, guid: b6fef183ebecb124dac36431e6082d83, type: 3}
@@ -31865,6 +31854,10 @@ PrefabInstance:
       propertyPath: m_RootOrder
       value: 8
       objectReference: {fileID: 0}
+    - target: {fileID: 856280405, guid: b6fef183ebecb124dac36431e6082d83, type: 3}
+      propertyPath: m_RootOrder
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 1038335820, guid: b6fef183ebecb124dac36431e6082d83, type: 3}
       propertyPath: m_AnchoredPosition.x
       value: 720
@@ -33017,7 +33010,7 @@ PrefabInstance:
     - target: {fileID: 8047345230169135897, guid: 04b09a0d639d64d418041a73a0a217b1, type: 3}
       propertyPath: currentWeaponText
       value: 
-      objectReference: {fileID: 44052446}
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 04b09a0d639d64d418041a73a0a217b1, type: 3}
 --- !u!1001 &1696876527
@@ -33952,8 +33945,12 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1436866030}
     - target: {fileID: 11923924367437814, guid: fa16d278e52a8284fbb88561435f5469, type: 3}
+      propertyPath: timer
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 11923924367437814, guid: fa16d278e52a8284fbb88561435f5469, type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 11923924367437821, guid: fa16d278e52a8284fbb88561435f5469, type: 3}
       propertyPath: m_Layer
@@ -34035,7 +34032,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2117792253}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ac702e2f35530ba4ba56a1702e868d05, type: 3}
   m_Name: 
