@@ -490,8 +490,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -551, y: -299}
-  m_SizeDelta: {x: 616.5757, y: 139.5987}
+  m_AnchoredPosition: {x: -414.87335, y: -299}
+  m_SizeDelta: {x: 888.829, y: 139.5987}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1632043360
 MonoBehaviour:
@@ -854,6 +854,10 @@ PrefabInstance:
       propertyPath: currentHPBar
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 8047345230169135897, guid: 04b09a0d639d64d418041a73a0a217b1, type: 3}
+      propertyPath: currentWeaponText
+      value: 
+      objectReference: {fileID: 1632043360}
     - target: {fileID: 8047345230169135897, guid: 04b09a0d639d64d418041a73a0a217b1, type: 3}
       propertyPath: playerHPBar.Array.size
       value: 5

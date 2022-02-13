@@ -39,6 +39,7 @@ public Weapon currentWeapon= Weapon.NineMill;
          instance=this;
          DontDestroyOnLoad(this);
          SetPlayerHP();
+         UIMananger.instance.UpdateCurrentWeapon();
          
 
         

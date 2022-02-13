@@ -9,7 +9,7 @@ public class Item : MonoBehaviour
     [SerializeField] private ShopSystem.ItemType itemType;
 
     void Start(){
-        Debug.Assert(cost>0);//make sure cost is > 0
+        Debug.Assert(cost>=0);//make sure cost is >= 0
     }
     void OnTriggerEnter2D(Collider2D col){
 

@@ -9,6 +9,11 @@ public class PlayerControl : MonoBehaviour
     [SerializeField]private Camera mainCamera;
 
 
+    private bool canTakeDamage=true;
+
+    [SerializeField] private float iFrameTime=1f;
+
+
     [SerializeField]LineRenderer lineRenderer;
 
     private AnimatorController animatorLogic;
@@ -46,29 +51,20 @@ public class PlayerControl : MonoBehaviour
             animatorLogic.ChangeAnimationState(DOWN);
         }
     }
-    public Vector2 GetMousePos(){
-        return Input.mousePosition;
-        
-    }
+ 
 
-   void DrawLine(){
-       lineRenderer.enabled=true;
-       List<Vector3> pos= new List<Vector3>();
-       pos.Add(gameObject.transform.position);
-       pos.Add(GetMousePos());
-      
-       lineRenderer.SetPositions(pos.ToArray());
-       lineRenderer.startWidth=0.8f;
-       lineRenderer.endWidth=0.8f;
-
-       //lineRenderer.useWorldSpace=true;
-
-   }
 
   void OnTriggerEnter2D(Collider2D other){
-      if(other.gameObject.tag=="EnemyProjectile"){
-          print("damage");
+      if(other.gameObject.tag=="EnemyProjectile" && canTakeDamage){
+          canTakeDamage=false;
           GameManager.instance.DoAction(1,GameManager.value.currentPlayerHp,false);
+          StartCoroutine(IFrames());
+
+      }
+
+      IEnumerator IFrames(){
+          yield return new WaitForSeconds(iFrameTime);
+          canTakeDamage=true;
       }
   }
 
