@@ -19,8 +19,8 @@ TagManager:
   - Enemy
   - Walls
   - Ground
-  - 
-  - 
+  - EnemyProjectile
+  - Player
   - 
   - 
   - 

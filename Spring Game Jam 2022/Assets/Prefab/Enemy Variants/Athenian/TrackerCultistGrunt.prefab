@@ -53,7 +53,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5842136481130904085, guid: dc7032f77c433e448bea77c093e27137, type: 3}
       propertyPath: m_Name
-      value: TrackerGrunt
+      value: TrackerCultistGrunt
+      objectReference: {fileID: 0}
+    - target: {fileID: 5842136481130904085, guid: dc7032f77c433e448bea77c093e27137, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dc7032f77c433e448bea77c093e27137, type: 3}

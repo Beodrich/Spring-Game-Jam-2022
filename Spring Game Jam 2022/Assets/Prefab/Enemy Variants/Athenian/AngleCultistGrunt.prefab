@@ -53,7 +53,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3881818890686574798, guid: 20a91b371c4e544479c2eab246cfde4e, type: 3}
       propertyPath: m_Name
-      value: AngleGrunt
+      value: AngleCultistGrunt
+      objectReference: {fileID: 0}
+    - target: {fileID: 3881818890686574798, guid: 20a91b371c4e544479c2eab246cfde4e, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 20a91b371c4e544479c2eab246cfde4e, type: 3}

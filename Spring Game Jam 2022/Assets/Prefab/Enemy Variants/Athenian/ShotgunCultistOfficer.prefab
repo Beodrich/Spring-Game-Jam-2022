@@ -53,7 +53,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6084194174972224077, guid: 5cbfaccf5be9d964c973e30c2182eb4e, type: 3}
       propertyPath: m_Name
-      value: ShotgunOfficer
+      value: ShotgunCultistOfficer
+      objectReference: {fileID: 0}
+    - target: {fileID: 6084194174972224077, guid: 5cbfaccf5be9d964c973e30c2182eb4e, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5cbfaccf5be9d964c973e30c2182eb4e, type: 3}

@@ -53,7 +53,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7830554080544577581, guid: 3444db0aaa67a8c4b8247bfaf1b2b191, type: 3}
       propertyPath: m_Name
-      value: ConeOfficer
+      value: ConeCultistOfficer
+      objectReference: {fileID: 0}
+    - target: {fileID: 7830554080544577581, guid: 3444db0aaa67a8c4b8247bfaf1b2b191, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3444db0aaa67a8c4b8247bfaf1b2b191, type: 3}

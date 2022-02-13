@@ -111,7 +111,7 @@ GameObject:
   - component: {fileID: 3881818890686574793}
   - component: {fileID: 3881818890686574794}
   - component: {fileID: 3881818890686574797}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: AngleGrunt
   m_TagString: Enemy
   m_Icon: {fileID: 0}

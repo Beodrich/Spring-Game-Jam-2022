@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 9092920365590644978}
   - component: {fileID: 7838852358806601877}
   - component: {fileID: 4244679532979478087}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: AimedBullet
   m_TagString: EnemyProjectile
   m_Icon: {fileID: 0}

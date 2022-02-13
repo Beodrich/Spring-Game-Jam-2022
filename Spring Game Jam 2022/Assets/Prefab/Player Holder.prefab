@@ -17,7 +17,7 @@ GameObject:
   - component: {fileID: 2898050923363970809}
   - component: {fileID: 2898050923363970811}
   - component: {fileID: 8768640043548893944}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: player :)
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -389,7 +389,7 @@ GameObject:
   - component: {fileID: 4745723362388737940}
   m_Layer: 0
   m_Name: Player Holder
-  m_TagString: Player
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

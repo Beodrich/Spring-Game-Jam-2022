@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 5842136481130904082}
   - component: {fileID: 5842136481130904081}
   - component: {fileID: 5842136481130904086}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: TrackerGrunt
   m_TagString: Enemy
   m_Icon: {fileID: 0}

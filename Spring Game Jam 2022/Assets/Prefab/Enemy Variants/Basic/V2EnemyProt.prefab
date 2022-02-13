@@ -111,7 +111,7 @@ GameObject:
   - component: {fileID: 2767461907819265357}
   - component: {fileID: 2767461907819265358}
   - component: {fileID: 2767461907819265356}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: V2EnemyProt
   m_TagString: Enemy
   m_Icon: {fileID: 0}
