@@ -161,8 +161,14 @@ public class EnemyAI_V2 : MonoBehaviour
 
     protected virtual void Die()
     {
+         int ran= Random.Range(0,269420);
+        if(ran%2==0){
+            ShopSystem.instance.SpawnItem(this.transform);
+        }
         Destroy(gameObject);
     }
+        //spawn shit
+       
 
     protected virtual void FollowPlayer()
     {
