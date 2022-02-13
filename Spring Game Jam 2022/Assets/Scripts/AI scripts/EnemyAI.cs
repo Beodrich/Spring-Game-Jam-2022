@@ -43,7 +43,13 @@ public class EnemyAI : MonoBehaviour
     {
         up, down, left, right
     }
+    [HideInInspector]
+    public enum ShootingMode
+    {
+        tracking, fixedAngle, Cone
+    }
 
+    public ShootingMode shootMode = ShootingMode.tracking;
     public movementModes mode = movementModes.moveSet;
 
     protected virtual void Start()
@@ -139,18 +145,35 @@ public class EnemyAI : MonoBehaviour
 
     protected virtual void shoot()
     {
-        if(Time.time > shotCooldown + timeLastFired)
+        if (Time.time > shotCooldown + timeLastFired)
         {
-            GameObject projectile = Instantiate(bulletPrefab, gunBarrel.position, gunBarrel.rotation);
-            Rigidbody2D rb = projectile.GetComponent<Rigidbody2D>();
-            //Vector3 dir = player.transform.position - gunBarrel.position;
-            Vector3 dir = player.transform.position - gunBarrel.position;
-            Vector2 BulletDir = new Vector2 (Mathf.Cos(ShootAngle), Mathf.Sin(ShootAngle));
-            rb.AddForce(BulletDir.normalized * shotForce, ForceMode2D.Impulse);
+            // tracking shoot mode
+            if (shootMode == ShootingMode.tracking)
+            {
+                GameObject projectile = Instantiate(bulletPrefab, gunBarrel.position, gunBarrel.rotation);
+                Rigidbody2D rb = projectile.GetComponent<Rigidbody2D>();
+                Vector3 dir = player.transform.position - gunBarrel.position;
+                rb.AddForce(dir.normalized * shotForce, ForceMode2D.Impulse);
+            }
+
+            // fixed angle shoot mode
+            if (shootMode == ShootingMode.fixedAngle)
+            {
+                GameObject projectile = Instantiate(bulletPrefab, gunBarrel.position, gunBarrel.rotation);
+                Rigidbody2D rb = projectile.GetComponent<Rigidbody2D>();
+
+                Vector3 dir = player.transform.position - gunBarrel.position;
+                Vector2 BulletDir = new Vector2(Mathf.Cos(ShootAngle), Mathf.Sin(ShootAngle));
+                rb.AddForce(BulletDir.normalized * shotForce, ForceMode2D.Impulse);
+            }
+
+            // cone mode
+            if (shootMode == ShootingMode.Cone)
+            {
+                // tbd
+            }
 
             timeLastFired = Time.time;
-            //Vector2 Target = new Vector2(player.transform.position.x, player.transform.position.y);
-            //transform.position = Vector2.MoveTowards(gunBarrel.transform.position, Target, calculatedSpeed);
         }
 
     }
