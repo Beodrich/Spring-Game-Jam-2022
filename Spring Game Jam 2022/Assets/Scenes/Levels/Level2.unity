@@ -31852,7 +31852,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 162319016, guid: b6fef183ebecb124dac36431e6082d83, type: 3}
       propertyPath: m_RootOrder
-      value: 8
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 856280405, guid: b6fef183ebecb124dac36431e6082d83, type: 3}
       propertyPath: m_RootOrder
@@ -32518,7 +32518,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objectToFollow: {fileID: 2117792253}
-  speed: 2
+  speed: 4
 --- !u!81 &1436866029
 AudioListener:
   m_ObjectHideFlags: 0
@@ -32554,7 +32554,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 8
+  orthographic size: 12
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
