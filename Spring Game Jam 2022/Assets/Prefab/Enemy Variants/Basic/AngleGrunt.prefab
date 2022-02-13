@@ -194,6 +194,6 @@ MonoBehaviour:
   - duration: 3
     movementAccel: {x: 0, y: 3}
     MoveClassDirection: 1
-  mode: 0
+  mode: 5
   FixedShootAngle: 0
   shootMode: 1
