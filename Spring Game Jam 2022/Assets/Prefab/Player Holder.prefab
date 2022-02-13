@@ -1,5 +1,35 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &1109427766
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1109427767}
+  m_Layer: 0
+  m_Name: bullettip
+  m_TagString: Untagged
+  m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1109427767
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1109427766}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0.131, y: -0.025, z: 0.32710105}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 11923924367437808}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &11923924367437821
 GameObject:
   m_ObjectHideFlags: 0
@@ -17,6 +47,7 @@ GameObject:
   - component: {fileID: 2898050923363970809}
   - component: {fileID: 2898050923363970811}
   - component: {fileID: 8768640043548893944}
+  - component: {fileID: 1592284520}
   m_Layer: 11
   m_Name: player :)
   m_TagString: Player
@@ -34,7 +65,8 @@ Transform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -0.23586734, y: 0.13990247, z: -0.32710105}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 1109427767}
   m_Father: {fileID: 4745723362388737940}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -101,8 +133,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 989b6dff9775e1c41adf700baa49e89e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 5
+  speed: 10
   mainCamera: {fileID: 0}
+  iFrameTime: 1
   lineRenderer: {fileID: 11923924367437809}
 --- !u!120 &11923924367437809
 LineRenderer:
@@ -209,7 +242,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 11923924367437821}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 72771401f9cc3e2499b1daac12c002e1, type: 3}
   m_Name: 
@@ -296,6 +329,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a3fba35f40cedb343ab00f5b6be8b330, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1592284520
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 11923924367437821}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ac702e2f35530ba4ba56a1702e868d05, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gunTip: {fileID: 1109427767}
+  bullet: {fileID: 4131563316169754560, guid: d2cceaae9e7e3c34087c5534b3f9ba38, type: 3}
+  crosshair: {fileID: 1483681980756537225}
+  timer: 1
+  speed: 100
+  angle: 60
+  pellotCount: 6
 --- !u!1 &1483681980756537225
 GameObject:
   m_ObjectHideFlags: 0
