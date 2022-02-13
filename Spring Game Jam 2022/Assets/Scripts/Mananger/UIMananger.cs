@@ -3,12 +3,18 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class UIMananger : MonoBehaviour
 {
     public static UIMananger instance;
 
     [SerializeField] private TMP_Text itemCostText;
+
+
+    [SerializeField] private GameObject dealthScene;
+
+    bool isDead=true;
 
 
     public GameObject FullHP;
@@ -37,6 +43,8 @@ public class UIMananger : MonoBehaviour
 
     [SerializeField] private TMP_Text currentWeaponText;
     // Start is called before the first frame update
+
+    
     void Start()
     {
         if(instance==null){
@@ -46,6 +54,20 @@ public class UIMananger : MonoBehaviour
         }
         else{
             Destroy(instance);
+        }
+    }
+    void Update(){
+        if(isDead){
+            if(Input.GetKey(KeyCode.Space)){
+                GameManager.instance.LoadLevel(SceneManager.GetActiveScene().name);
+                isDead=false;
+                GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerControl>().enabled=true;
+
+                dealthScene.SetActive(false);
+            }
+            else if(Input.GetKey(KeyCode.Escape)){
+                GameManager.instance.Quit();
+            }
         }
     }
 
@@ -86,6 +108,8 @@ public class UIMananger : MonoBehaviour
         TwoHP.SetActive(false);
         OneHP.SetActive(false);
         Dead.SetActive(true);
+        dealthScene.SetActive(true);
+        GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerControl>().enabled=false;
         break;
         default:
         Debug.LogError("Health not supported");
