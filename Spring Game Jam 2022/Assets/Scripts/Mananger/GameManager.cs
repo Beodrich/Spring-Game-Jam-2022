@@ -7,6 +7,7 @@ public class GameManager : MonoBehaviour
 {
 
     public static GameManager instance;
+    
 
     private int score;
 
@@ -22,6 +23,12 @@ public class GameManager : MonoBehaviour
         currentPlayerHp
     };
 
+public enum Weapon{
+NineMill,
+ShotGun
+
+};
+public Weapon currentWeapon= Weapon.NineMill;
     
 
 
@@ -32,6 +39,8 @@ public class GameManager : MonoBehaviour
          instance=this;
          DontDestroyOnLoad(this);
          SetPlayerHP();
+         
+
         
      }   
      else{
@@ -47,8 +56,26 @@ public class GameManager : MonoBehaviour
     currentPlayerHp=MAX_PLAYER_HP;
 
     }
- 
+    public void SetWeapon(Weapon weapon){
+        currentWeapon=weapon;
+        GameObject player= GameObject.FindGameObjectWithTag("Player");
 
+        switch(currentWeapon){
+            case Weapon.NineMill:
+            player.GetComponent<SpreadShot>().enabled=false;
+            player.GetComponent<NineMill>().enabled=true;
+            
+
+            //TODO UPDATE WHAT WEAPON THE PLAYER HAS
+            break;
+            case Weapon.ShotGun:
+            player.GetComponent<SpreadShot>().enabled=true;
+            player.GetComponent<NineMill>().enabled=false;
+            //TODO UPDATE WHAT WEAPON THE PLAYER HAS
+            break;
+        }
+    }
+    public Weapon GetCurrentWeapon(){return currentWeapon;}
     public void DoAction(int amount, value enumValue, bool isAdding){
         switch(enumValue){
             case value.currentPlayerHp:
