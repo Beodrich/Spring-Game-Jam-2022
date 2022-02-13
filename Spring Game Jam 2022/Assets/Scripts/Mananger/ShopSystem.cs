@@ -8,7 +8,8 @@ public class ShopSystem : MonoBehaviour
 
     public enum ItemType{
         Health,
-        SpreadShot
+        NineMill,
+        ShotGun
 
     };
     // Start is called before the first frame update
@@ -34,6 +35,20 @@ public class ShopSystem : MonoBehaviour
 
             GameManager.instance.DoAction(1,GameManager.value.currentPlayerHp,true);
             break;
+            case ItemType.ShotGun:
+            
+             GameManager.instance.DoAction(cost,GameManager.value.Money,false);
+             GameManager.instance.SetWeapon(GameManager.Weapon.ShotGun);
+
+             UIMananger.instance.UpdateCurrentWeapon();
+             break;
+
+            case ItemType.NineMill:
+             GameManager.instance.DoAction(cost,GameManager.value.Money,false);
+             GameManager.instance.SetWeapon(GameManager.Weapon.NineMill);
+             UIMananger.instance.UpdateCurrentWeapon();
+             break;
+
             default:
             Debug.LogError("Item does not exist");
             break;

@@ -32,6 +32,8 @@ public class UIMananger : MonoBehaviour
         Dead=0
     }
     [SerializeField] private TMP_Text moneyText;
+
+    [SerializeField] private TMP_Text currentWeaponText;
     // Start is called before the first frame update
     void Start()
     {
@@ -102,6 +104,20 @@ public class UIMananger : MonoBehaviour
 
 
 
+   }
+   public void UpdateCurrentWeapon(){
+       switch(GameManager.instance.GetCurrentWeapon()){
+           case GameManager.Weapon.NineMill:
+           currentWeaponText.text="Current Weapon is 9Mill";
+           break;
+
+         case GameManager.Weapon.ShotGun:
+          currentWeaponText.text="Current Weapon is ShotGun";
+          break;
+
+
+       }
+       
    }
   
    }
