@@ -47,7 +47,6 @@ GameObject:
   - component: {fileID: 2898050923363970809}
   - component: {fileID: 2898050923363970811}
   - component: {fileID: 8768640043548893944}
-  - component: {fileID: 1592284520}
   m_Layer: 11
   m_Name: player :)
   m_TagString: Player
@@ -329,25 +328,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a3fba35f40cedb343ab00f5b6be8b330, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &1592284520
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 11923924367437821}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ac702e2f35530ba4ba56a1702e868d05, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  gunTip: {fileID: 1109427767}
-  bullet: {fileID: 4131563316169754560, guid: d2cceaae9e7e3c34087c5534b3f9ba38, type: 3}
-  crosshair: {fileID: 1483681980756537225}
-  timer: 1
-  speed: 100
-  angle: 60
-  pellotCount: 6
 --- !u!1 &1483681980756537225
 GameObject:
   m_ObjectHideFlags: 0

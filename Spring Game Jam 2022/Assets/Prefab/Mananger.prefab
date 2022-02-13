@@ -45,6 +45,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 157b1cecf290e684da4f55c2f70e87c7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  currentWeapon: 0
 --- !u!114 &8047345230169135897
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -57,13 +58,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 210f906061a75814e8641a195863beae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerHPBar:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  itemCostText: {fileID: 0}
+  FullHP: {fileID: 0}
+  ThreeHP: {fileID: 0}
+  TwoHP: {fileID: 0}
+  OneHP: {fileID: 0}
+  Dead: {fileID: 0}
   moneyText: {fileID: 0}
+  currentWeaponText: {fileID: 0}
 --- !u!114 &411493585014447420
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -76,3 +78,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fa54c5b46c41be446944b8880f04aabc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  items:
+  - {fileID: 9201466017169724569, guid: 641f598259811644d9b2ff1661bb168c, type: 3}
+  - {fileID: 7874298691360720638, guid: 38de6cb33fcc0e64d9b87b814818036a, type: 3}
