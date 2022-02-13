@@ -4,7 +4,10 @@ using UnityEngine;
 
 public class Pythagoras : EnemyAI_V2
 {
+
+    [SerializeField] private string onBossDealthSceneChange;
     // Cone Variables
+
     [SerializeField]
     private int ConeBulletNum = 10;
     [SerializeField]
@@ -26,6 +29,7 @@ public class Pythagoras : EnemyAI_V2
 
     protected override void Start()
     {
+
         base.Start();
     }
 
@@ -52,6 +56,7 @@ public class Pythagoras : EnemyAI_V2
 
     protected override void Die()
     {
+        GameManager.instance.LoadLevel(onBossDealthSceneChange);
         base.Die();
     }
 
