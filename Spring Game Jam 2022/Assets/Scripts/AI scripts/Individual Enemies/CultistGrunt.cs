@@ -4,11 +4,11 @@ using UnityEngine;
 
 public class CultistGrunt : EnemyAI
 {
-    public enum ShootingMode
+    public enum GShootingMode
     {
         tracking, fixedAngle
     }
-    public ShootingMode shootMode = ShootingMode.tracking;
+    public GShootingMode gShootMode = GShootingMode.tracking;
 
     protected override void Start()
     {
@@ -59,10 +59,25 @@ public class CultistGrunt : EnemyAI
     {
         if (Time.time > shotCooldown + timeLastFired)
         {
-            GameObject projectile = Instantiate(bulletPrefab, gunBarrel.position, gunBarrel.rotation);
-            Rigidbody2D rb = projectile.GetComponent<Rigidbody2D>();
-            Vector3 dir = player.transform.position - gunBarrel.position;
-            rb.AddForce(dir.normalized * shotForce, ForceMode2D.Impulse);
+            // tracking shoot mode
+            if (gShootMode == GShootingMode.tracking)
+            {
+                GameObject projectile = Instantiate(bulletPrefab, gunBarrel.position, gunBarrel.rotation);
+                Rigidbody2D rb = projectile.GetComponent<Rigidbody2D>();
+                Vector3 dir = player.transform.position - gunBarrel.position;
+                rb.AddForce(dir.normalized * shotForce, ForceMode2D.Impulse);
+            }
+
+            // fixed angle shoot mode
+            if (gShootMode == GShootingMode.fixedAngle)
+            {
+                GameObject projectile = Instantiate(bulletPrefab, gunBarrel.position, gunBarrel.rotation);
+                Rigidbody2D rb = projectile.GetComponent<Rigidbody2D>();
+
+                Vector3 dir = player.transform.position - gunBarrel.position;
+                Vector2 BulletDir = new Vector2(Mathf.Cos(ShootAngle), Mathf.Sin(ShootAngle));
+                rb.AddForce(BulletDir.normalized * shotForce, ForceMode2D.Impulse);
+            }
 
             timeLastFired = Time.time;
         }

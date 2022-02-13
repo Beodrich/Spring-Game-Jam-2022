@@ -53,6 +53,7 @@ public class EnemyAI : MonoBehaviour
         tracking, fixedAngle, Cone
     }
 
+    [SerializeField]
     private ShootingMode shootMode = ShootingMode.tracking;
     public movementModes mode = movementModes.moveSet;
 

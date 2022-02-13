@@ -8,11 +8,11 @@ public class CultistOfficer : EnemyAI
     //public new float startAngle = 0f;
     //public new float endAngle = 180f;
 
-    public enum ShootingMode
+    public enum OShootingMode
     {
         tracking, fixedAngle, Cone
     }
-    public ShootingMode shootMode = ShootingMode.tracking;
+    public OShootingMode oShootMode = OShootingMode.tracking;
 
     protected override void Start()
     {
@@ -91,7 +91,7 @@ public class CultistOfficer : EnemyAI
         if (Time.time > shotCooldown + timeLastFired)
         {
             // tracking shoot mode
-            if (shootMode == ShootingMode.tracking)
+            if (oShootMode == OShootingMode.tracking)
             {
                 GameObject projectile = Instantiate(bulletPrefab, gunBarrel.position, gunBarrel.rotation);
                 Rigidbody2D rb = projectile.GetComponent<Rigidbody2D>();
@@ -100,7 +100,7 @@ public class CultistOfficer : EnemyAI
             }
 
             // fixed angle shoot mode
-            if (shootMode == ShootingMode.fixedAngle)
+            if (oShootMode == OShootingMode.fixedAngle)
             {
                 GameObject projectile = Instantiate(bulletPrefab, gunBarrel.position, gunBarrel.rotation);
                 Rigidbody2D rb = projectile.GetComponent<Rigidbody2D>();
@@ -111,7 +111,7 @@ public class CultistOfficer : EnemyAI
             }
 
             // cone mode
-            if (shootMode == ShootingMode.Cone)
+            if (oShootMode == OShootingMode.Cone)
             {
                 float angleStep = (endAngle - startAngle) / numConeBullets;
                 float angle = startAngle;
