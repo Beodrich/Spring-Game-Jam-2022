@@ -29,8 +29,13 @@ public class EnemyAI : MonoBehaviour
     protected bool hitWall;
 
     public float ShootAngle;
-   
-    
+
+    // Cone shooting mode stuff
+    public int numConeBullets = 10;
+    public float startAngle = 0f;
+    public float endAngle = 180f;
+
+
 
     // enums
     [HideInInspector]
@@ -43,13 +48,12 @@ public class EnemyAI : MonoBehaviour
     {
         up, down, left, right
     }
-    [HideInInspector]
-    public enum ShootingMode
+    private enum ShootingMode
     {
         tracking, fixedAngle, Cone
     }
 
-    public ShootingMode shootMode = ShootingMode.tracking;
+    private ShootingMode shootMode = ShootingMode.tracking;
     public movementModes mode = movementModes.moveSet;
 
     protected virtual void Start()
@@ -170,7 +174,27 @@ public class EnemyAI : MonoBehaviour
             // cone mode
             if (shootMode == ShootingMode.Cone)
             {
-                // tbd
+                float angleStep = (endAngle - startAngle) / numConeBullets;
+                float angle = startAngle;
+
+                Debug.Log("conemode");
+                for (int i = 0; i < numConeBullets + 1; i++)
+                {
+                    float dirX = transform.position.x + Mathf.Sin((angle * Mathf.PI) / 180f);
+                    float dirY = transform.position.y + Mathf.Cos((angle * Mathf.PI) / 180f);
+
+                    Vector3 bulletMoveVector = new Vector3(dirX, dirY, 0f);
+                    Vector2 bulletDir = (bulletMoveVector - transform.position).normalized;
+
+                    GameObject bullet = Instantiate(bulletPrefab);
+                    Rigidbody2D rb = bullet.GetComponent<Rigidbody2D>();
+                    bullet.transform.position = gunBarrel.position;
+                    bullet.transform.rotation = gunBarrel.rotation;
+                    rb.AddForce(bulletDir * shotForce, ForceMode2D.Impulse);
+
+                    angle += angleStep;
+
+                }
             }
 
             timeLastFired = Time.time;
