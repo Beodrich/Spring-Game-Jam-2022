@@ -34173,6 +34173,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tesla
       objectReference: {fileID: 0}
+    - target: {fileID: 7973672955606124027, guid: 46d8ccfdf9bb2c046b4298e3925c7e46, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7973672955606124030, guid: 46d8ccfdf9bb2c046b4298e3925c7e46, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -34187,7 +34191,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7973672955606124030, guid: 46d8ccfdf9bb2c046b4298e3925c7e46, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: -1
       objectReference: {fileID: 0}
     - target: {fileID: 7973672955606124030, guid: 46d8ccfdf9bb2c046b4298e3925c7e46, type: 3}
       propertyPath: m_LocalRotation.w
@@ -34215,6 +34219,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7973672955606124030, guid: 46d8ccfdf9bb2c046b4298e3925c7e46, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7973672956663539858, guid: 46d8ccfdf9bb2c046b4298e3925c7e46, type: 3}
+      propertyPath: m_Layer
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
