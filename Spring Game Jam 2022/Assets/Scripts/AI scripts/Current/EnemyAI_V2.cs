@@ -32,6 +32,7 @@ public class EnemyAI_V2 : MonoBehaviour
     protected int moveIndex;
     protected float moveStartTime;
     protected bool hitWall;
+    private bool stoppedVel = false;
 
     // enums
     [HideInInspector]
@@ -42,7 +43,7 @@ public class EnemyAI_V2 : MonoBehaviour
     [HideInInspector]
     public enum movementDirections
     {
-        up, down, left, right
+        up_down, left_right, diagonal
     }
     [SerializeField]
     private movementModes mode = movementModes.moveSet;
@@ -104,6 +105,7 @@ public class EnemyAI_V2 : MonoBehaviour
                 moveIndex = 0;
             }
             currentMove = moveSet[moveIndex];
+            stoppedVel = false;
             moveStartTime = Time.time;
         }
     }
@@ -113,21 +115,40 @@ public class EnemyAI_V2 : MonoBehaviour
         DecideMove();
         Vector2 velocity = rb.velocity;
 
-        if (currentMove.MoveClassDirection == movementDirections.right)
+        if (currentMove.MoveClassDirection == movementDirections.left_right)
         {
-            velocity.x += currentMove.movementAccel.x * Time.deltaTime;
+            if (!stoppedVel)
+            {
+                stoppedVel = true;
+                velocity.x = 0;
+                velocity.y = 0;
+                rb.velocity = velocity;
+            }
+                
+            velocity.x = currentMove.movementAccel.x;
         }
-        if (currentMove.MoveClassDirection == movementDirections.left)
+        if (currentMove.MoveClassDirection == movementDirections.up_down)
         {
-            velocity.x -= currentMove.movementAccel.x * Time.deltaTime;
+            if (!stoppedVel)
+            {
+                stoppedVel = true;
+                velocity.x = 0;
+                velocity.y = 0;
+                rb.velocity = velocity;
+            }
+            velocity.y = currentMove.movementAccel.y;
         }
-        if (currentMove.MoveClassDirection == movementDirections.up)
+        if (currentMove.MoveClassDirection == movementDirections.diagonal)
         {
-            velocity.y += currentMove.movementAccel.y * Time.deltaTime;
-        }
-        if (currentMove.MoveClassDirection == movementDirections.down)
-        {
-            velocity.y -= currentMove.movementAccel.y * Time.deltaTime;
+            if (!stoppedVel)
+            {
+                stoppedVel = true;
+                velocity.x = 0;
+                velocity.y = 0;
+                rb.velocity = velocity;
+            }
+            velocity.y = currentMove.movementAccel.y;
+            velocity.x = currentMove.movementAccel.x;
         }
 
         rb.velocity = velocity;
