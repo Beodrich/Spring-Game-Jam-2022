@@ -28,6 +28,11 @@ public class PlayerControl : MonoBehaviour
 
 
     private const string DEATH="death";
+
+   public  enum direction{
+        up,down,left,right
+    }
+    public static direction currentDirection= direction.up;
    
     void Start(){
         animatorLogic=GetComponent<AnimatorController>();
@@ -43,15 +48,19 @@ public class PlayerControl : MonoBehaviour
 
         if(Input.GetKeyDown(KeyCode.W)){
             animatorLogic.ChangeAnimationState(UP);
+            currentDirection=direction.up;
         }
         if(Input.GetKeyDown(KeyCode.D)){
             animatorLogic.ChangeAnimationState(RIGHT);
+            currentDirection=direction.right;
         }
         if(Input.GetKeyDown(KeyCode.A)){
             animatorLogic.ChangeAnimationState(LEFT);
+            currentDirection=direction.left;
         }
         if(Input.GetKeyDown(KeyCode.S)){
             animatorLogic.ChangeAnimationState(DOWN);
+            currentDirection=direction.down;
         }
 
     }

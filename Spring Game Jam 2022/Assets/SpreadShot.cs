@@ -72,7 +72,25 @@ public class SpreadShot : MonoBehaviour
             pellets[i]=Random.rotation;
             GameObject p= Instantiate(bullet,gunTip.position,gunTip.rotation);
             p.transform.rotation=Quaternion.RotateTowards(p.transform.rotation,pellets[i],angle);
-            p.GetComponent<Rigidbody2D>().AddForce(p.transform.right*direction*speed);
+            switch(PlayerControl.currentDirection){
+                case PlayerControl.direction.up:
+                 p.GetComponent<Rigidbody2D>().AddForce(p.transform.up*direction*speed);
+
+                
+                break;
+                case PlayerControl.direction.down:
+                p.GetComponent<Rigidbody2D>().AddForce(p.transform.up*direction*speed);
+
+                break;
+                case PlayerControl.direction.left:
+                p.GetComponent<Rigidbody2D>().AddForce(p.transform.right*direction*speed);
+
+                break;
+                case PlayerControl.direction.right:
+                p.GetComponent<Rigidbody2D>().AddForce(p.transform.right*direction*speed);
+
+                break;
+            }
 
 
         }

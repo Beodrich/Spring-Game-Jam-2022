@@ -6,7 +6,7 @@ using TMPro;
 public class Item : MonoBehaviour
 {   
     
-    [SerializeField] private int cost;
+    [SerializeField] private int cost=0;
     [SerializeField] private ShopSystem.ItemType itemType;
 
 
@@ -36,4 +36,5 @@ public class Item : MonoBehaviour
     IEnumerator BuyItem(){
         yield return new WaitForSeconds(1f);
     }
+    
 }

@@ -6,6 +6,9 @@ public class ShopSystem : MonoBehaviour
 {
     public static ShopSystem instance;
 
+
+    public GameObject[] items;
+
     public enum ItemType{
         Health,
         NineMill,
@@ -55,5 +58,11 @@ public class ShopSystem : MonoBehaviour
 
 
         }
+    }
+    public void SpawnItem(Transform pos){
+        int ran=Random.Range(0,items.Length);
+        
+       GameObject itemSpawn= Instantiate(items[ran],pos.transform.position,Quaternion.identity);
+
     }
 }
