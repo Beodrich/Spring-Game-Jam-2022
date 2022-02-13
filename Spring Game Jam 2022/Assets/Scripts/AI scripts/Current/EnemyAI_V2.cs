@@ -74,7 +74,7 @@ public class EnemyAI_V2 : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        //Debug.Log("layer: " + collision.gameObject.layer);
+        Debug.Log("layer: " + collision.gameObject.tag);
         if (collision.gameObject.tag == "PlayerProjectile")
         {
             TakeDamage();
@@ -87,6 +87,10 @@ public class EnemyAI_V2 : MonoBehaviour
         {
             hitWall = true;
             //Debug.Log("hit wall");
+        }
+        if (collision.gameObject.tag == "PlayerProjectile")
+        {
+            TakeDamage();
         }
     }
 

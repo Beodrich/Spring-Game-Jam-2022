@@ -7926,6 +7926,28 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 7924963681785181468, guid: 05db8b14524435f4a9fc44c4a685ead5, type: 3}
   m_PrefabInstance: {fileID: 30586911}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &44052446 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1559446549, guid: b6fef183ebecb124dac36431e6082d83, type: 3}
+  m_PrefabInstance: {fileID: 1095272793}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &163695401 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 162319017, guid: b6fef183ebecb124dac36431e6082d83, type: 3}
+  m_PrefabInstance: {fileID: 1095272793}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &209177198
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7933,25 +7955,17 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 7924963680695228528, guid: 05db8b14524435f4a9fc44c4a685ead5, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 7924963681785181465, guid: 05db8b14524435f4a9fc44c4a685ead5, type: 3}
       propertyPath: m_Name
       value: AngleTeslaGrunt (12)
       objectReference: {fileID: 0}
+    - target: {fileID: 7924963681785181466, guid: 05db8b14524435f4a9fc44c4a685ead5, type: 3}
+      propertyPath: shootMode
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7924963681785181468, guid: 05db8b14524435f4a9fc44c4a685ead5, type: 3}
       propertyPath: m_RootOrder
       value: 21
-      objectReference: {fileID: 0}
-    - target: {fileID: 7924963681785181468, guid: 05db8b14524435f4a9fc44c4a685ead5, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 7924963681785181468, guid: 05db8b14524435f4a9fc44c4a685ead5, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 7924963681785181468, guid: 05db8b14524435f4a9fc44c4a685ead5, type: 3}
       propertyPath: m_LocalPosition.x
@@ -7963,7 +7977,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7924963681785181468, guid: 05db8b14524435f4a9fc44c4a685ead5, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -1.2891585
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7924963681785181468, guid: 05db8b14524435f4a9fc44c4a685ead5, type: 3}
       propertyPath: m_LocalRotation.w
@@ -8002,25 +8016,17 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 7924963680695228528, guid: 05db8b14524435f4a9fc44c4a685ead5, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 7924963681785181465, guid: 05db8b14524435f4a9fc44c4a685ead5, type: 3}
       propertyPath: m_Name
       value: AngleTeslaGrunt (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 7924963681785181466, guid: 05db8b14524435f4a9fc44c4a685ead5, type: 3}
+      propertyPath: shootMode
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7924963681785181468, guid: 05db8b14524435f4a9fc44c4a685ead5, type: 3}
       propertyPath: m_RootOrder
       value: 13
-      objectReference: {fileID: 0}
-    - target: {fileID: 7924963681785181468, guid: 05db8b14524435f4a9fc44c4a685ead5, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 7924963681785181468, guid: 05db8b14524435f4a9fc44c4a685ead5, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 7924963681785181468, guid: 05db8b14524435f4a9fc44c4a685ead5, type: 3}
       propertyPath: m_LocalPosition.x
@@ -8032,7 +8038,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7924963681785181468, guid: 05db8b14524435f4a9fc44c4a685ead5, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -1.2891585
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7924963681785181468, guid: 05db8b14524435f4a9fc44c4a685ead5, type: 3}
       propertyPath: m_LocalRotation.w
@@ -8071,25 +8077,17 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 7924963680695228528, guid: 05db8b14524435f4a9fc44c4a685ead5, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 7924963681785181465, guid: 05db8b14524435f4a9fc44c4a685ead5, type: 3}
       propertyPath: m_Name
       value: AngleTeslaGrunt (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 7924963681785181466, guid: 05db8b14524435f4a9fc44c4a685ead5, type: 3}
+      propertyPath: shootMode
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7924963681785181468, guid: 05db8b14524435f4a9fc44c4a685ead5, type: 3}
       propertyPath: m_RootOrder
       value: 12
-      objectReference: {fileID: 0}
-    - target: {fileID: 7924963681785181468, guid: 05db8b14524435f4a9fc44c4a685ead5, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 7924963681785181468, guid: 05db8b14524435f4a9fc44c4a685ead5, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 7924963681785181468, guid: 05db8b14524435f4a9fc44c4a685ead5, type: 3}
       propertyPath: m_LocalPosition.x
@@ -8101,7 +8099,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7924963681785181468, guid: 05db8b14524435f4a9fc44c4a685ead5, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -1.2891585
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7924963681785181468, guid: 05db8b14524435f4a9fc44c4a685ead5, type: 3}
       propertyPath: m_LocalRotation.w
@@ -30551,25 +30549,17 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 7924963680695228528, guid: 05db8b14524435f4a9fc44c4a685ead5, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 7924963681785181465, guid: 05db8b14524435f4a9fc44c4a685ead5, type: 3}
       propertyPath: m_Name
       value: AngleTeslaGrunt
       objectReference: {fileID: 0}
+    - target: {fileID: 7924963681785181466, guid: 05db8b14524435f4a9fc44c4a685ead5, type: 3}
+      propertyPath: shootMode
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7924963681785181468, guid: 05db8b14524435f4a9fc44c4a685ead5, type: 3}
       propertyPath: m_RootOrder
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7924963681785181468, guid: 05db8b14524435f4a9fc44c4a685ead5, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 7924963681785181468, guid: 05db8b14524435f4a9fc44c4a685ead5, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 10
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 7924963681785181468, guid: 05db8b14524435f4a9fc44c4a685ead5, type: 3}
       propertyPath: m_LocalPosition.x
@@ -30728,25 +30718,17 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 7924963680695228528, guid: 05db8b14524435f4a9fc44c4a685ead5, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 7924963681785181465, guid: 05db8b14524435f4a9fc44c4a685ead5, type: 3}
       propertyPath: m_Name
       value: AngleTeslaGrunt (9)
       objectReference: {fileID: 0}
+    - target: {fileID: 7924963681785181466, guid: 05db8b14524435f4a9fc44c4a685ead5, type: 3}
+      propertyPath: shootMode
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7924963681785181468, guid: 05db8b14524435f4a9fc44c4a685ead5, type: 3}
       propertyPath: m_RootOrder
       value: 18
-      objectReference: {fileID: 0}
-    - target: {fileID: 7924963681785181468, guid: 05db8b14524435f4a9fc44c4a685ead5, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 7924963681785181468, guid: 05db8b14524435f4a9fc44c4a685ead5, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 7924963681785181468, guid: 05db8b14524435f4a9fc44c4a685ead5, type: 3}
       propertyPath: m_LocalPosition.x
@@ -30758,7 +30740,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7924963681785181468, guid: 05db8b14524435f4a9fc44c4a685ead5, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -1.2891585
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7924963681785181468, guid: 05db8b14524435f4a9fc44c4a685ead5, type: 3}
       propertyPath: m_LocalRotation.w
@@ -30797,25 +30779,17 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 7924963680695228528, guid: 05db8b14524435f4a9fc44c4a685ead5, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 7924963681785181465, guid: 05db8b14524435f4a9fc44c4a685ead5, type: 3}
       propertyPath: m_Name
       value: AngleTeslaGrunt (8)
       objectReference: {fileID: 0}
+    - target: {fileID: 7924963681785181466, guid: 05db8b14524435f4a9fc44c4a685ead5, type: 3}
+      propertyPath: shootMode
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7924963681785181468, guid: 05db8b14524435f4a9fc44c4a685ead5, type: 3}
       propertyPath: m_RootOrder
       value: 17
-      objectReference: {fileID: 0}
-    - target: {fileID: 7924963681785181468, guid: 05db8b14524435f4a9fc44c4a685ead5, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 7924963681785181468, guid: 05db8b14524435f4a9fc44c4a685ead5, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 7924963681785181468, guid: 05db8b14524435f4a9fc44c4a685ead5, type: 3}
       propertyPath: m_LocalPosition.x
@@ -30827,7 +30801,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7924963681785181468, guid: 05db8b14524435f4a9fc44c4a685ead5, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -1.2891585
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7924963681785181468, guid: 05db8b14524435f4a9fc44c4a685ead5, type: 3}
       propertyPath: m_LocalRotation.w
@@ -31022,7 +30996,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &794613268
 PrefabInstance:
@@ -31031,25 +31005,17 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 7924963680695228528, guid: 05db8b14524435f4a9fc44c4a685ead5, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 7924963681785181465, guid: 05db8b14524435f4a9fc44c4a685ead5, type: 3}
       propertyPath: m_Name
       value: AngleTeslaGrunt (13)
       objectReference: {fileID: 0}
+    - target: {fileID: 7924963681785181466, guid: 05db8b14524435f4a9fc44c4a685ead5, type: 3}
+      propertyPath: shootMode
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7924963681785181468, guid: 05db8b14524435f4a9fc44c4a685ead5, type: 3}
       propertyPath: m_RootOrder
       value: 22
-      objectReference: {fileID: 0}
-    - target: {fileID: 7924963681785181468, guid: 05db8b14524435f4a9fc44c4a685ead5, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 7924963681785181468, guid: 05db8b14524435f4a9fc44c4a685ead5, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 7924963681785181468, guid: 05db8b14524435f4a9fc44c4a685ead5, type: 3}
       propertyPath: m_LocalPosition.x
@@ -31061,7 +31027,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7924963681785181468, guid: 05db8b14524435f4a9fc44c4a685ead5, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -1.2891585
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7924963681785181468, guid: 05db8b14524435f4a9fc44c4a685ead5, type: 3}
       propertyPath: m_LocalRotation.w
@@ -31199,25 +31165,17 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 7924963680695228528, guid: 05db8b14524435f4a9fc44c4a685ead5, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 7924963681785181465, guid: 05db8b14524435f4a9fc44c4a685ead5, type: 3}
       propertyPath: m_Name
       value: AngleTeslaGrunt (7)
       objectReference: {fileID: 0}
+    - target: {fileID: 7924963681785181466, guid: 05db8b14524435f4a9fc44c4a685ead5, type: 3}
+      propertyPath: shootMode
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7924963681785181468, guid: 05db8b14524435f4a9fc44c4a685ead5, type: 3}
       propertyPath: m_RootOrder
       value: 16
-      objectReference: {fileID: 0}
-    - target: {fileID: 7924963681785181468, guid: 05db8b14524435f4a9fc44c4a685ead5, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 7924963681785181468, guid: 05db8b14524435f4a9fc44c4a685ead5, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 7924963681785181468, guid: 05db8b14524435f4a9fc44c4a685ead5, type: 3}
       propertyPath: m_LocalPosition.x
@@ -31229,7 +31187,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7924963681785181468, guid: 05db8b14524435f4a9fc44c4a685ead5, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -1.2891585
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7924963681785181468, guid: 05db8b14524435f4a9fc44c4a685ead5, type: 3}
       propertyPath: m_LocalRotation.w
@@ -31456,7 +31414,7 @@ Transform:
   m_Children:
   - {fileID: 2093076}
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1073204492
 PrefabInstance:
@@ -31573,9 +31531,21 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 162319016, guid: b6fef183ebecb124dac36431e6082d83, type: 3}
+      propertyPath: m_RootOrder
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 1038335820, guid: b6fef183ebecb124dac36431e6082d83, type: 3}
       propertyPath: m_AnchoredPosition.x
       value: 720
+      objectReference: {fileID: 0}
+    - target: {fileID: 1559446548, guid: b6fef183ebecb124dac36431e6082d83, type: 3}
+      propertyPath: m_RootOrder
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 1632043359, guid: b6fef183ebecb124dac36431e6082d83, type: 3}
+      propertyPath: m_RootOrder
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 6821498997784151854, guid: b6fef183ebecb124dac36431e6082d83, type: 3}
       propertyPath: m_AnchoredPosition.x
@@ -31591,7 +31561,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6821498998415040321, guid: b6fef183ebecb124dac36431e6082d83, type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 6821498998415040321, guid: b6fef183ebecb124dac36431e6082d83, type: 3}
       propertyPath: m_AnchorMax.x
@@ -31727,25 +31697,17 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 7924963680695228528, guid: 05db8b14524435f4a9fc44c4a685ead5, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 7924963681785181465, guid: 05db8b14524435f4a9fc44c4a685ead5, type: 3}
       propertyPath: m_Name
       value: AngleTeslaGrunt (10)
       objectReference: {fileID: 0}
+    - target: {fileID: 7924963681785181466, guid: 05db8b14524435f4a9fc44c4a685ead5, type: 3}
+      propertyPath: shootMode
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7924963681785181468, guid: 05db8b14524435f4a9fc44c4a685ead5, type: 3}
       propertyPath: m_RootOrder
       value: 19
-      objectReference: {fileID: 0}
-    - target: {fileID: 7924963681785181468, guid: 05db8b14524435f4a9fc44c4a685ead5, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 7924963681785181468, guid: 05db8b14524435f4a9fc44c4a685ead5, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 7924963681785181468, guid: 05db8b14524435f4a9fc44c4a685ead5, type: 3}
       propertyPath: m_LocalPosition.x
@@ -31757,7 +31719,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7924963681785181468, guid: 05db8b14524435f4a9fc44c4a685ead5, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -1.2891585
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7924963681785181468, guid: 05db8b14524435f4a9fc44c4a685ead5, type: 3}
       propertyPath: m_LocalRotation.w
@@ -31796,25 +31758,17 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 7924963680695228528, guid: 05db8b14524435f4a9fc44c4a685ead5, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 7924963681785181465, guid: 05db8b14524435f4a9fc44c4a685ead5, type: 3}
       propertyPath: m_Name
       value: AngleTeslaGrunt (11)
       objectReference: {fileID: 0}
+    - target: {fileID: 7924963681785181466, guid: 05db8b14524435f4a9fc44c4a685ead5, type: 3}
+      propertyPath: shootMode
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7924963681785181468, guid: 05db8b14524435f4a9fc44c4a685ead5, type: 3}
       propertyPath: m_RootOrder
       value: 20
-      objectReference: {fileID: 0}
-    - target: {fileID: 7924963681785181468, guid: 05db8b14524435f4a9fc44c4a685ead5, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 7924963681785181468, guid: 05db8b14524435f4a9fc44c4a685ead5, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 7924963681785181468, guid: 05db8b14524435f4a9fc44c4a685ead5, type: 3}
       propertyPath: m_LocalPosition.x
@@ -31826,7 +31780,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7924963681785181468, guid: 05db8b14524435f4a9fc44c4a685ead5, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -1.2891585
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7924963681785181468, guid: 05db8b14524435f4a9fc44c4a685ead5, type: 3}
       propertyPath: m_LocalRotation.w
@@ -32009,7 +31963,7 @@ Transform:
   - {fileID: 2014186320}
   - {fileID: 30586912}
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1389199035
 GameObject:
@@ -32305,7 +32259,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1458240664
 PrefabInstance:
@@ -32368,25 +32322,17 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 7924963680695228528, guid: 05db8b14524435f4a9fc44c4a685ead5, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 7924963681785181465, guid: 05db8b14524435f4a9fc44c4a685ead5, type: 3}
       propertyPath: m_Name
       value: AngleTeslaGrunt (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 7924963681785181466, guid: 05db8b14524435f4a9fc44c4a685ead5, type: 3}
+      propertyPath: shootMode
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7924963681785181468, guid: 05db8b14524435f4a9fc44c4a685ead5, type: 3}
       propertyPath: m_RootOrder
       value: 15
-      objectReference: {fileID: 0}
-    - target: {fileID: 7924963681785181468, guid: 05db8b14524435f4a9fc44c4a685ead5, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 7924963681785181468, guid: 05db8b14524435f4a9fc44c4a685ead5, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 7924963681785181468, guid: 05db8b14524435f4a9fc44c4a685ead5, type: 3}
       propertyPath: m_LocalPosition.x
@@ -32398,7 +32344,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7924963681785181468, guid: 05db8b14524435f4a9fc44c4a685ead5, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -1.2891585
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7924963681785181468, guid: 05db8b14524435f4a9fc44c4a685ead5, type: 3}
       propertyPath: m_LocalRotation.w
@@ -32437,25 +32383,17 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 7924963680695228528, guid: 05db8b14524435f4a9fc44c4a685ead5, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 7924963681785181465, guid: 05db8b14524435f4a9fc44c4a685ead5, type: 3}
       propertyPath: m_Name
       value: AngleTeslaGrunt (14)
       objectReference: {fileID: 0}
+    - target: {fileID: 7924963681785181466, guid: 05db8b14524435f4a9fc44c4a685ead5, type: 3}
+      propertyPath: shootMode
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7924963681785181468, guid: 05db8b14524435f4a9fc44c4a685ead5, type: 3}
       propertyPath: m_RootOrder
       value: 23
-      objectReference: {fileID: 0}
-    - target: {fileID: 7924963681785181468, guid: 05db8b14524435f4a9fc44c4a685ead5, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 7924963681785181468, guid: 05db8b14524435f4a9fc44c4a685ead5, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 7924963681785181468, guid: 05db8b14524435f4a9fc44c4a685ead5, type: 3}
       propertyPath: m_LocalPosition.x
@@ -32467,7 +32405,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7924963681785181468, guid: 05db8b14524435f4a9fc44c4a685ead5, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -1.2891585
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7924963681785181468, guid: 05db8b14524435f4a9fc44c4a685ead5, type: 3}
       propertyPath: m_LocalRotation.w
@@ -32562,7 +32500,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4506290582022249047, guid: 04b09a0d639d64d418041a73a0a217b1, type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 4506290582022249047, guid: 04b09a0d639d64d418041a73a0a217b1, type: 3}
       propertyPath: m_LocalPosition.x
@@ -32653,6 +32591,14 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 0}
     - target: {fileID: 8047345230169135897, guid: 04b09a0d639d64d418041a73a0a217b1, type: 3}
+      propertyPath: itemCostText
+      value: 
+      objectReference: {fileID: 163695401}
+    - target: {fileID: 8047345230169135897, guid: 04b09a0d639d64d418041a73a0a217b1, type: 3}
+      propertyPath: currentWeaponText
+      value: 
+      objectReference: {fileID: 44052446}
+    - target: {fileID: 8047345230169135897, guid: 04b09a0d639d64d418041a73a0a217b1, type: 3}
       propertyPath: playerHPBar.Array.size
       value: 5
       objectReference: {fileID: 0}
@@ -32709,25 +32655,17 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 7924963680695228528, guid: 05db8b14524435f4a9fc44c4a685ead5, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 7924963681785181465, guid: 05db8b14524435f4a9fc44c4a685ead5, type: 3}
       propertyPath: m_Name
       value: AngleTeslaGrunt (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 7924963681785181466, guid: 05db8b14524435f4a9fc44c4a685ead5, type: 3}
+      propertyPath: shootMode
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7924963681785181468, guid: 05db8b14524435f4a9fc44c4a685ead5, type: 3}
       propertyPath: m_RootOrder
       value: 14
-      objectReference: {fileID: 0}
-    - target: {fileID: 7924963681785181468, guid: 05db8b14524435f4a9fc44c4a685ead5, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 7924963681785181468, guid: 05db8b14524435f4a9fc44c4a685ead5, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 7924963681785181468, guid: 05db8b14524435f4a9fc44c4a685ead5, type: 3}
       propertyPath: m_LocalPosition.x
@@ -32739,7 +32677,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7924963681785181468, guid: 05db8b14524435f4a9fc44c4a685ead5, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -1.2891585
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7924963681785181468, guid: 05db8b14524435f4a9fc44c4a685ead5, type: 3}
       propertyPath: m_LocalRotation.w
@@ -32877,25 +32815,17 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 7924963680695228528, guid: 05db8b14524435f4a9fc44c4a685ead5, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 7924963681785181465, guid: 05db8b14524435f4a9fc44c4a685ead5, type: 3}
       propertyPath: m_Name
       value: AngleTeslaGrunt (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 7924963681785181466, guid: 05db8b14524435f4a9fc44c4a685ead5, type: 3}
+      propertyPath: shootMode
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7924963681785181468, guid: 05db8b14524435f4a9fc44c4a685ead5, type: 3}
       propertyPath: m_RootOrder
       value: 11
-      objectReference: {fileID: 0}
-    - target: {fileID: 7924963681785181468, guid: 05db8b14524435f4a9fc44c4a685ead5, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 7924963681785181468, guid: 05db8b14524435f4a9fc44c4a685ead5, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 7924963681785181468, guid: 05db8b14524435f4a9fc44c4a685ead5, type: 3}
       propertyPath: m_LocalPosition.x
@@ -32907,7 +32837,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7924963681785181468, guid: 05db8b14524435f4a9fc44c4a685ead5, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -1.2891585
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7924963681785181468, guid: 05db8b14524435f4a9fc44c4a685ead5, type: 3}
       propertyPath: m_LocalRotation.w
@@ -32978,7 +32908,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 7874298691360720626, guid: 38de6cb33fcc0e64d9b87b814818036a, type: 3}
       propertyPath: m_RootOrder
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7874298691360720626, guid: 38de6cb33fcc0e64d9b87b814818036a, type: 3}
       propertyPath: m_LocalPosition.x
@@ -33445,7 +33375,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4745723362388737940, guid: fa16d278e52a8284fbb88561435f5469, type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 4745723362388737940, guid: fa16d278e52a8284fbb88561435f5469, type: 3}
       propertyPath: m_LocalPosition.x
@@ -33530,24 +33460,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 7924963680695228528, guid: 05db8b14524435f4a9fc44c4a685ead5, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 7924963681785181465, guid: 05db8b14524435f4a9fc44c4a685ead5, type: 3}
       propertyPath: m_Name
       value: AngleTeslaGrunt (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 7924963681785181466, guid: 05db8b14524435f4a9fc44c4a685ead5, type: 3}
+      propertyPath: shootMode
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7924963681785181468, guid: 05db8b14524435f4a9fc44c4a685ead5, type: 3}
       propertyPath: m_RootOrder
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 7924963681785181468, guid: 05db8b14524435f4a9fc44c4a685ead5, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 7924963681785181468, guid: 05db8b14524435f4a9fc44c4a685ead5, type: 3}
-      propertyPath: m_LocalScale.y
       value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 7924963681785181468, guid: 05db8b14524435f4a9fc44c4a685ead5, type: 3}
@@ -33560,7 +33482,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7924963681785181468, guid: 05db8b14524435f4a9fc44c4a685ead5, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -1.2891585
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7924963681785181468, guid: 05db8b14524435f4a9fc44c4a685ead5, type: 3}
       propertyPath: m_LocalRotation.w
