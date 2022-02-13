@@ -4,9 +4,14 @@ using UnityEngine;
 
 public class CultistOfficer : EnemyAI
 {
-    //public new int numConeBullets = 10;
-    //public new float startAngle = 0f;
-    //public new float endAngle = 180f;
+    [HideInInspector]
+    
+    [SerializeField]
+    private int oNumConeBullets = 10;
+    [SerializeField]
+    private float oStartAngle = 0f;
+    [SerializeField]
+    private float oEndAngle = 180f;
 
     public enum OShootingMode
     {
@@ -113,11 +118,11 @@ public class CultistOfficer : EnemyAI
             // cone mode
             if (oShootMode == OShootingMode.Cone)
             {
-                float angleStep = (endAngle - startAngle) / numConeBullets;
-                float angle = startAngle;
+                float angleStep = (oEndAngle - oStartAngle) / oNumConeBullets;
+                float angle = oStartAngle;
 
                 Debug.Log("conemode");
-                for (int i = 0; i < numConeBullets + 1; i++)
+                for (int i = 0; i < oNumConeBullets + 1; i++)
                 {
                     float dirX = transform.position.x + Mathf.Sin((angle * Mathf.PI) / 180f);
                     float dirY = transform.position.y + Mathf.Cos((angle * Mathf.PI) / 180f);

@@ -31,9 +31,20 @@ public class EnemyAI : MonoBehaviour
     public float ShootAngle;
 
     // Cone shooting mode stuff
-    public int numConeBullets = 10;
-    public float startAngle = 0f;
-    public float endAngle = 180f;
+    [SerializeField]
+    private int numConeBullets = 10;
+    [SerializeField]
+    private float startAngle = 0f;
+    [SerializeField]
+    private float endAngle = 180f;
+
+    // Shotgun Shooting Mode
+    [SerializeField]
+    private int numShotgunBullets = 2;
+    [SerializeField]
+    private float shotgunSA = 60;
+    [SerializeField]
+    private float shotgunEA = 120;
 
 
 
@@ -50,7 +61,7 @@ public class EnemyAI : MonoBehaviour
     }
     private enum ShootingMode
     {
-        tracking, fixedAngle, Cone
+        tracking, fixedAngle, Cone, Shotgun
     }
 
     [SerializeField]
@@ -183,6 +194,32 @@ public class EnemyAI : MonoBehaviour
                 {
                     float dirX = transform.position.x + Mathf.Sin((angle * Mathf.PI) / 180f);
                     float dirY = transform.position.y + Mathf.Cos((angle * Mathf.PI) / 180f);
+
+                    Vector3 bulletMoveVector = new Vector3(dirX, dirY, 0f);
+                    Vector2 bulletDir = (bulletMoveVector - transform.position).normalized;
+
+                    GameObject bullet = Instantiate(bulletPrefab);
+                    Rigidbody2D rb = bullet.GetComponent<Rigidbody2D>();
+                    bullet.transform.position = gunBarrel.position;
+                    bullet.transform.rotation = gunBarrel.rotation;
+                    rb.AddForce(bulletDir * shotForce, ForceMode2D.Impulse);
+
+                    angle += angleStep;
+
+                }
+            }
+
+            // Shotgun mode
+            if (shootMode == ShootingMode.Shotgun)
+            {
+                float angleStep = (shotgunEA - shotgunSA) / numShotgunBullets;
+                float angle = startAngle;
+
+                Debug.Log("shotgun");
+                for (int i = 0; i < numShotgunBullets + 1; i++)
+                {
+                    float dirX = player.transform.position.x + Mathf.Sin((angle * Mathf.PI) / 180f);
+                    float dirY = player.transform.position.y + Mathf.Cos((angle * Mathf.PI) / 180f);
 
                     Vector3 bulletMoveVector = new Vector3(dirX, dirY, 0f);
                     Vector2 bulletDir = (bulletMoveVector - transform.position).normalized;
