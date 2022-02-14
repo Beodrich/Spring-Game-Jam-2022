@@ -8,6 +8,8 @@ using UnityEngine.SceneManagement;
 public class UIMananger : MonoBehaviour
 {
     [SerializeField] private GameObject dealthText;
+
+    public Canvas canvas;
     public static UIMananger instance;
 
     [SerializeField] private TMP_Text itemCostText;
@@ -15,7 +17,7 @@ public class UIMananger : MonoBehaviour
 
     [SerializeField] private GameObject dealthScene;
 
-    bool isDead=true;
+   public static bool isDead=true;
 
 
     public GameObject FullHP;
@@ -42,19 +44,38 @@ public class UIMananger : MonoBehaviour
     }
     [SerializeField] private TMP_Text moneyText;
 
+    List<GameObject> shit= new List<GameObject>();
+
+
     // Start is called before the first frame update
 
     
-    void Start()
+    void Awake()
     {
-        if(instance==null){
+        
+        if(instance==null || GameManager.hasDied || this==instance){
             instance=this;
-            DontDestroyOnLoad(this);
+            DontDestroyOnLoad(instance);
+            
+
 
         }
         else{
             Destroy(instance);
+
         }
+        DontDestroyOnLoad(instance);
+        DontDestroyOnLoad(itemCostText);
+        DontDestroyOnLoad(dealthText);
+        DontDestroyOnLoad(dealthScene);
+        DontDestroyOnLoad(FullHP);
+        DontDestroyOnLoad(ThreeHP);
+        DontDestroyOnLoad(TwoHP);
+        DontDestroyOnLoad(OneHP);
+        DontDestroyOnLoad(canvas);
+
+
+
     }
     void Update(){
         if(isDead){
